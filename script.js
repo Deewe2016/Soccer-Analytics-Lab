@@ -155,7 +155,7 @@ async function loadRatings() {
 
 teams = Object.fromEntries(
   data.teams.map(item => [
-    countryNames[item.code] || item.team,
+    countryNames[item.team] || item.team,
     Number(item.elo)
   ])
 );
