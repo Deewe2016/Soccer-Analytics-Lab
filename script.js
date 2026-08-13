@@ -16,6 +16,7 @@ let ratingsUpdatedAt = null;
 
 const home = document.querySelector('#home');
 const away = document.querySelector('#away');
+const venue = document.querySelector('#venue');
 const homeElo = document.querySelector('#homeElo');
 const awayElo = document.querySelector('#awayElo');
 const homeOut = document.querySelector('#homeOut');
@@ -25,7 +26,7 @@ function populateTeams() {
   home.replaceChildren();
   away.replaceChildren();
 
-  Object.entries(teams).forEach(([name, elo]) => {
+  Object.entries(teams).forEach(([name]) => {
     home.add(new Option(name, name));
     away.add(new Option(name, name));
   });
@@ -48,8 +49,14 @@ function syncRatings() {
   analyze();
 }
 
+function getHomeAdvantage() {
+  if (venue.value === 'home') return 55;
+  if (venue.value === 'away') return -55;
+  return 0;
+}
+
 function analyze() {
-  const h = Number(homeElo.value) + 55;
+  const h = Number(homeElo.value) + getHomeAdvantage();
   const a = Number(awayElo.value);
   const expectedHome = 1 / (1 + Math.pow(10, (a - h) / 400));
   const draw = Math.max(0.15, 0.30 - Math.abs(expectedHome - 0.5) * 0.22);
@@ -88,6 +95,7 @@ async function loadRatings() {
 
 home.addEventListener('change', syncRatings);
 away.addEventListener('change', syncRatings);
+venue.addEventListener('change', analyze);
 homeElo.addEventListener('input', updateLabels);
 awayElo.addEventListener('input', updateLabels);
 document.querySelector('#analyze').addEventListener('click', analyze);
