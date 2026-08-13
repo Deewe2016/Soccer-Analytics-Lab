@@ -2,7 +2,6 @@ const fallbackTeams = {
   "Brazil": 1880, "France": 1860, "Spain": 1845, "Argentina": 1835, "England": 1810,
   "Portugal": 1795, "Germany": 1785, "Netherlands": 1765, "Italy": 1745, "Belgium": 1735
 };
-
 let teams = fallbackTeams;
 let teamStats = {};
 const home = document.querySelector('#home');
@@ -12,100 +11,13 @@ const homeElo = document.querySelector('#homeElo');
 const awayElo = document.querySelector('#awayElo');
 const homeOut = document.querySelector('#homeOut');
 const awayOut = document.querySelector('#awayOut');
-
-const countryNames = {
-  ES:'Spain', AR:'Argentina', EN:'England', FR:'France', CO:'Colombia', PT:'Portugal', BR:'Brazil', NL:'Netherlands', NO:'Norway', BE:'Belgium', CH:'Switzerland', MX:'Mexico', DE:'Germany', MA:'Morocco', JP:'Japan', HR:'Croatia', EC:'Ecuador', DK:'Denmark', IT:'Italy', TR:'Turkey', UY:'Uruguay', AT:'Austria', SN:'Senegal', PY:'Paraguay', AU:'Australia', UA:'Ukraine', RU:'Russia', NG:'Nigeria', IR:'Iran', DZ:'Algeria', US:'United States', SQ:'Scotland', GR:'Greece', EG:'Egypt', RS:'Serbia', VE:'Venezuela', SE:'Sweden', CA:'Canada', CI:'Ivory Coast', KR:'South Korea', CL:'Chile', KO:'Kosovo', HU:'Hungary', PL:'Poland', CD:'DR Congo', PE:'Peru', IE:'Ireland', SI:'Slovenia', WA:'Wales', CZ:'Czech Republic', SK:'Slovakia', PA:'Panama', GE:'Georgia', IL:'Israel', RO:'Romania', UZ:'Uzbekistan', JO:'Jordan', BO:'Bolivia', CV:'Cape Verde', AL:'Albania', CM:'Cameroon', CR:'Costa Rica', BA:'Bosnia and Herzegovina', EI:'Ireland', SA:'Saudi Arabia', GH:'Ghana', HN:'Honduras', IS:'Iceland', TN:'Tunisia', IQ:'Iraq', ZA:'South Africa'
-};
-
-function displayName(item) {
-  const raw = String(item.team ?? item.code ?? '').trim();
-  return countryNames[raw.toUpperCase()] || raw;
-}
-
-function getStats(name, elo) {
-  return { elo, ...(teamStats[name] || {}) };
-}
-
-function populateTeams() {
-  home.replaceChildren();
-  away.replaceChildren();
-  Object.keys(teams).forEach(name => {
-    home.add(new Option(name, name));
-    away.add(new Option(name, name));
-  });
-  const names = Object.keys(teams);
-  home.value = teams.Brazil ? 'Brazil' : names[0];
-  away.value = teams.France ? 'France' : names[1] || names[0];
-  syncRatings();
-}
-
-function updateLabels() { homeOut.value = homeElo.value; awayOut.value = awayElo.value; }
-function syncRatings() { homeElo.value = teams[home.value] ?? 1500; awayElo.value = teams[away.value] ?? 1500; updateLabels(); analyze(); }
-
-function analyze() {
-  if (!window.SoccerModel) {
-    console.error('SoccerModel has not loaded.');
-    return;
-  }
-
-  const team1 = getStats(home.value, Number(homeElo.value));
-  const team2 = getStats(away.value, Number(awayElo.value));
-  const result = window.SoccerModel.analyzeMatch(team1, team2, venue.value);
-  const p = result.probabilities;
-  const goals = result.prediction.expectedGoals;
-
-  document.querySelector('#win').textContent = `${(p.team1Win * 100).toFixed(1)}%`;
-  document.querySelector('#draw').textContent = `${(p.draw * 100).toFixed(1)}%`;
-  document.querySelector('#loss').textContent = `${(p.team2Win * 100).toFixed(1)}%`;
-
-  const xgHome = document.querySelector('#xgHome');
-  const xgAway = document.querySelector('#xgAway');
-  const likelyScore = document.querySelector('#likelyScore');
-  if (xgHome) xgHome.textContent = goals.team1.toFixed(2);
-  if (xgAway) xgAway.textContent = goals.team2.toFixed(2);
-  if (likelyScore) likelyScore.textContent = result.mostLikelyScores[0]?.score ?? '—';
-
-  document.querySelector('#barHome').style.width = `${p.team1Win * 100}%`;
-  document.querySelector('#barDraw').style.width = `${p.draw * 100}%`;
-  document.querySelector('#barAway').style.width = `${p.team2Win * 100}%`;
-}
-
-async function loadRatings() {
-  try {
-    const response = await fetch(`ratings.json?cacheBust=${Date.now()}`, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    if (!Array.isArray(data.teams) || data.teams.length === 0) throw new Error('No ratings');
-    teams = Object.fromEntries(data.teams.map(item => [displayName(item), Number(item.elo)]));
-    populateTeams();
-    const status = document.querySelector('#dataStatus');
-    if (status) status.textContent = `Live ratings loaded · ${data.teams.length} teams`;
-  } catch (error) {
-    populateTeams();
-    const status = document.querySelector('#dataStatus');
-    if (status) status.textContent = 'Using built-in fallback ratings · automatic update has not run yet';
-    console.warn('Could not load ratings.json:', error);
-  }
-}
-
-async function loadTeamStats() {
-  try {
-    const response = await fetch(`team-stats.json?cacheBust=${Date.now()}`, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    teamStats = await response.json();
-    analyze();
-    console.log('Team statistics loaded.');
-  } catch (error) {
-    console.info('No team-stats.json yet. Using default statistics.', error);
-  }
-}
-
-home.addEventListener('change', syncRatings);
-away.addEventListener('change', syncRatings);
-venue.addEventListener('change', analyze);
-homeElo.addEventListener('input', () => { updateLabels(); analyze(); });
-awayElo.addEventListener('input', () => { updateLabels(); analyze(); });
-document.querySelector('#analyze').addEventListener('click', analyze);
-populateTeams();
-loadRatings();
-loadTeamStats();
+const countryNames = {ES:'Spain',AR:'Argentina',EN:'England',FR:'France',CO:'Colombia',PT:'Portugal',BR:'Brazil',NL:'Netherlands',NO:'Norway',BE:'Belgium',CH:'Switzerland',MX:'Mexico',DE:'Germany',MA:'Morocco',JP:'Japan',HR:'Croatia',EC:'Ecuador',DK:'Denmark',IT:'Italy',TR:'Turkey',UY:'Uruguay',AT:'Austria',SN:'Senegal',PY:'Paraguay',AU:'Australia',UA:'Ukraine',RU:'Russia',NG:'Nigeria',IR:'Iran',DZ:'Algeria',US:'United States',SQ:'Scotland',GR:'Greece',EG:'Egypt',RS:'Serbia',VE:'Venezuela',SE:'Sweden',CA:'Canada',CI:'Ivory Coast',KR:'South Korea',CL:'Chile',KO:'Kosovo',HU:'Hungary',PL:'Poland',CD:'DR Congo',PE:'Peru',IE:'Ireland',SI:'Slovenia',WA:'Wales',CZ:'Czech Republic',SK:'Slovakia',PA:'Panama',GE:'Georgia',IL:'Israel',RO:'Romania',UZ:'Uzbekistan',JO:'Jordan',BO:'Bolivia',CV:'Cape Verde',AL:'Albania',CM:'Cameroon',CR:'Costa Rica',BA:'Bosnia and Herzegovina',EI:'Ireland',SA:'Saudi Arabia',GH:'Ghana',HN:'Honduras',IS:'Iceland',TN:'Tunisia',IQ:'Iraq',ZA:'South Africa'};
+function displayName(item){const raw=String(item.team??item.code??'').trim();return countryNames[raw.toUpperCase()]||raw;}
+function getStats(name,elo){return {elo,...(teamStats[name]||{})};}
+function populateTeams(){home.replaceChildren();away.replaceChildren();Object.keys(teams).forEach(name=>{home.add(new Option(name,name));away.add(new Option(name,name));});const names=Object.keys(teams);home.value=teams.Brazil?'Brazil':names[0];away.value=teams.France?'France':names[1]||names[0];syncRatings();}
+function updateLabels(){homeOut.value=homeElo.value;awayOut.value=awayElo.value;}
+function syncRatings(){homeElo.value=teams[home.value]??1500;awayElo.value=teams[away.value]??1500;updateLabels();analyze();}
+function analyze(){if(!window.SoccerModel){console.error('SoccerModel has not loaded.');return;}const team1=getStats(home.value,Number(homeElo.value));const team2=getStats(away.value,Number(awayElo.value));const result=window.SoccerModel.analyzeMatch(team1,team2,venue.value);const p=result.probabilities;const goals=result.prediction.expectedGoals;document.querySelector('#win').textContent=`${(p.team1Win*100).toFixed(1)}%`;document.querySelector('#draw').textContent=`${(p.draw*100).toFixed(1)}%`;document.querySelector('#loss').textContent=`${(p.team2Win*100).toFixed(1)}%`;const xgHome=document.querySelector('#xgHome');const xgAway=document.querySelector('#xgAway');const likelyScore=document.querySelector('#likelyScore');if(xgHome)xgHome.textContent=goals.team1.toFixed(2);if(xgAway)xgAway.textContent=goals.team2.toFixed(2);const best=result.mostLikelyScores[0];if(likelyScore)likelyScore.textContent=best?`${home.value} ${best.team1Goals}–${best.team2Goals} ${away.value}`:'—';const homeName=document.querySelector('#scoreHomeName');const awayName=document.querySelector('#scoreAwayName');const homeGoals=document.querySelector('#scoreHomeGoals');const awayGoals=document.querySelector('#scoreAwayGoals');if(homeName)homeName.textContent=home.value;if(awayName)awayName.textContent=away.value;if(homeGoals)homeGoals.textContent=best?.team1Goals??'—';if(awayGoals)awayGoals.textContent=best?.team2Goals??'—';const explanation=document.querySelector('#scoreExplanation');if(explanation&&best)explanation.textContent=`The model's most likely exact score is ${home.value} ${best.team1Goals}–${best.team2Goals} ${away.value}.`;document.querySelector('#barHome').style.width=`${p.team1Win*100}%`;document.querySelector('#barDraw').style.width=`${p.draw*100}%`;document.querySelector('#barAway').style.width=`${p.team2Win*100}%`;}
+async function loadRatings(){try{const response=await fetch(`ratings.json?cacheBust=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error(`HTTP ${response.status}`);const data=await response.json();if(!Array.isArray(data.teams)||!data.teams.length)throw new Error('No ratings');teams=Object.fromEntries(data.teams.map(item=>[displayName(item),Number(item.elo)]));populateTeams();const status=document.querySelector('#dataStatus');if(status)status.textContent=`Live ratings loaded · ${data.teams.length} teams`;}catch(error){populateTeams();const status=document.querySelector('#dataStatus');if(status)status.textContent='Using built-in fallback ratings · automatic update has not run yet';console.warn('Could not load ratings.json:',error);}}
+async function loadTeamStats(){try{const response=await fetch(`team-stats.json?cacheBust=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error(`HTTP ${response.status}`);teamStats=await response.json();analyze();console.log('Team statistics loaded.');}catch(error){console.info('No team-stats.json yet. Using default statistics.',error);}}
+home.addEventListener('change',syncRatings);away.addEventListener('change',syncRatings);venue.addEventListener('change',analyze);homeElo.addEventListener('input',()=>{updateLabels();analyze();});awayElo.addEventListener('input',()=>{updateLabels();analyze();});document.querySelector('#analyze').addEventListener('click',analyze);populateTeams();loadRatings();loadTeamStats();
