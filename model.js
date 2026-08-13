@@ -235,18 +235,7 @@ function analyzeMatch(team1Stats, team2Stats, venue = "neutral") {
     probabilities,
 
     // Top 10 most likely exact scorelines
-    mostLikelyScores: scores
-      .slice(0, 10)
-      .map(score => ({
-        score:
-          `${score.team1Goals}-${score.team2Goals}`,
-
-        probability:
-          score.probability
-      }))
-  };
-}
-
+    mostLikelyScores: scores.slice(0, 10)
 
 // Make the functions available to the browser.
 window.SoccerModel = {
