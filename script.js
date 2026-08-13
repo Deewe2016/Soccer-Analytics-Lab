@@ -4,6 +4,7 @@ const fallbackTeams = {
 };
 
 let teams = fallbackTeams;
+let teamStats = {};
 const home = document.querySelector('#home');
 const away = document.querySelector('#away');
 const venue = document.querySelector('#venue');
@@ -21,6 +22,10 @@ function displayName(item) {
   return countryNames[raw.toUpperCase()] || raw;
 }
 
+function getStats(name, elo) {
+  return { elo, ...(teamStats[name] || {}) };
+}
+
 function populateTeams() {
   home.replaceChildren();
   away.replaceChildren();
@@ -36,66 +41,35 @@ function populateTeams() {
 
 function updateLabels() { homeOut.value = homeElo.value; awayOut.value = awayElo.value; }
 function syncRatings() { homeElo.value = teams[home.value] ?? 1500; awayElo.value = teams[away.value] ?? 1500; updateLabels(); analyze(); }
-function getHomeAdvantage() { return venue.value === 'home' ? 55 : venue.value === 'away' ? -55 : 0; }
 
 function analyze() {
   if (!window.SoccerModel) {
-    console.error("SoccerModel has not loaded.");
+    console.error('SoccerModel has not loaded.');
     return;
   }
 
-  const team1 = {
-    elo: Number(homeElo.value),
-    xgFor: Number(home.dataset.xgFor || 1.3),
-    xgAgainst: Number(home.dataset.xgAgainst || 1.3),
-    shots: Number(home.dataset.shots || 12),
-    shotsOnTarget: Number(home.dataset.shotsOnTarget || 4),
-    form: Number(home.dataset.form || 0),
-    attack: Number(home.dataset.attack || 1),
-    defense: Number(home.dataset.defense || 1),
-    possession: Number(home.dataset.possession || 50)
-  };
-
-  const team2 = {
-    elo: Number(awayElo.value),
-    xgFor: Number(away.dataset.xgFor || 1.3),
-    xgAgainst: Number(away.dataset.xgAgainst || 1.3),
-    shots: Number(away.dataset.shots || 12),
-    shotsOnTarget: Number(away.dataset.shotsOnTarget || 4),
-    form: Number(away.dataset.form || 0),
-    attack: Number(away.dataset.attack || 1),
-    defense: Number(away.dataset.defense || 1),
-    possession: Number(away.dataset.possession || 50)
-  };
-
-  const result = window.SoccerModel.analyzeMatch(
-    team1,
-    team2,
-    venue.value
-  );
-
+  const team1 = getStats(home.value, Number(homeElo.value));
+  const team2 = getStats(away.value, Number(awayElo.value));
+  const result = window.SoccerModel.analyzeMatch(team1, team2, venue.value);
   const p = result.probabilities;
+  const goals = result.prediction.expectedGoals;
 
-  document.querySelector('#win').textContent =
-    `${(p.team1Win * 100).toFixed(1)}%`;
+  document.querySelector('#win').textContent = `${(p.team1Win * 100).toFixed(1)}%`;
+  document.querySelector('#draw').textContent = `${(p.draw * 100).toFixed(1)}%`;
+  document.querySelector('#loss').textContent = `${(p.team2Win * 100).toFixed(1)}%`;
 
-  document.querySelector('#draw').textContent =
-    `${(p.draw * 100).toFixed(1)}%`;
+  const xgHome = document.querySelector('#xgHome');
+  const xgAway = document.querySelector('#xgAway');
+  const likelyScore = document.querySelector('#likelyScore');
+  if (xgHome) xgHome.textContent = goals.team1.toFixed(2);
+  if (xgAway) xgAway.textContent = goals.team2.toFixed(2);
+  if (likelyScore) likelyScore.textContent = result.mostLikelyScores[0]?.score ?? '—';
 
-  document.querySelector('#loss').textContent =
-    `${(p.team2Win * 100).toFixed(1)}%`;
-
-  document.querySelector('#barHome').style.width =
-    `${p.team1Win * 100}%`;
-
-  document.querySelector('#barDraw').style.width =
-    `${p.draw * 100}%`;
-
-  document.querySelector('#barAway').style.width =
-    `${p.team2Win * 100}%`;
-
-  console.log("Multi-factor prediction:", result);
+  document.querySelector('#barHome').style.width = `${p.team1Win * 100}%`;
+  document.querySelector('#barDraw').style.width = `${p.draw * 100}%`;
+  document.querySelector('#barAway').style.width = `${p.team2Win * 100}%`;
 }
+
 async function loadRatings() {
   try {
     const response = await fetch(`ratings.json?cacheBust=${Date.now()}`, { cache: 'no-store' });
@@ -114,11 +88,24 @@ async function loadRatings() {
   }
 }
 
+async function loadTeamStats() {
+  try {
+    const response = await fetch(`team-stats.json?cacheBust=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    teamStats = await response.json();
+    analyze();
+    console.log('Team statistics loaded.');
+  } catch (error) {
+    console.info('No team-stats.json yet. Using default statistics.', error);
+  }
+}
+
 home.addEventListener('change', syncRatings);
 away.addEventListener('change', syncRatings);
 venue.addEventListener('change', analyze);
-homeElo.addEventListener('input', updateLabels);
-awayElo.addEventListener('input', updateLabels);
+homeElo.addEventListener('input', () => { updateLabels(); analyze(); });
+awayElo.addEventListener('input', () => { updateLabels(); analyze(); });
 document.querySelector('#analyze').addEventListener('click', analyze);
 populateTeams();
 loadRatings();
+loadTeamStats();
