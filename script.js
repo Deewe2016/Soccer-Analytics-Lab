@@ -39,21 +39,63 @@ function syncRatings() { homeElo.value = teams[home.value] ?? 1500; awayElo.valu
 function getHomeAdvantage() { return venue.value === 'home' ? 55 : venue.value === 'away' ? -55 : 0; }
 
 function analyze() {
-  const h = Number(homeElo.value) + getHomeAdvantage();
-  const a = Number(awayElo.value);
-  const expectedHome = 1 / (1 + Math.pow(10, (a - h) / 400));
-  const draw = Math.max(0.15, 0.30 - Math.abs(expectedHome - 0.5) * 0.22);
-  const remaining = 1 - draw;
-  const homeWin = remaining * expectedHome;
-  const awayWin = remaining * (1 - expectedHome);
-  document.querySelector('#win').textContent = `${(homeWin * 100).toFixed(1)}%`;
-  document.querySelector('#draw').textContent = `${(draw * 100).toFixed(1)}%`;
-  document.querySelector('#loss').textContent = `${(awayWin * 100).toFixed(1)}%`;
-  document.querySelector('#barHome').style.width = `${homeWin * 100}%`;
-  document.querySelector('#barDraw').style.width = `${draw * 100}%`;
-  document.querySelector('#barAway').style.width = `${awayWin * 100}%`;
-}
+  if (!window.SoccerModel) {
+    console.error("SoccerModel has not loaded.");
+    return;
+  }
 
+  const team1 = {
+    elo: Number(homeElo.value),
+    xgFor: Number(home.dataset.xgFor || 1.3),
+    xgAgainst: Number(home.dataset.xgAgainst || 1.3),
+    shots: Number(home.dataset.shots || 12),
+    shotsOnTarget: Number(home.dataset.shotsOnTarget || 4),
+    form: Number(home.dataset.form || 0),
+    attack: Number(home.dataset.attack || 1),
+    defense: Number(home.dataset.defense || 1),
+    possession: Number(home.dataset.possession || 50)
+  };
+
+  const team2 = {
+    elo: Number(awayElo.value),
+    xgFor: Number(away.dataset.xgFor || 1.3),
+    xgAgainst: Number(away.dataset.xgAgainst || 1.3),
+    shots: Number(away.dataset.shots || 12),
+    shotsOnTarget: Number(away.dataset.shotsOnTarget || 4),
+    form: Number(away.dataset.form || 0),
+    attack: Number(away.dataset.attack || 1),
+    defense: Number(away.dataset.defense || 1),
+    possession: Number(away.dataset.possession || 50)
+  };
+
+  const result = window.SoccerModel.analyzeMatch(
+    team1,
+    team2,
+    venue.value
+  );
+
+  const p = result.probabilities;
+
+  document.querySelector('#win').textContent =
+    `${(p.team1Win * 100).toFixed(1)}%`;
+
+  document.querySelector('#draw').textContent =
+    `${(p.draw * 100).toFixed(1)}%`;
+
+  document.querySelector('#loss').textContent =
+    `${(p.team2Win * 100).toFixed(1)}%`;
+
+  document.querySelector('#barHome').style.width =
+    `${p.team1Win * 100}%`;
+
+  document.querySelector('#barDraw').style.width =
+    `${p.draw * 100}%`;
+
+  document.querySelector('#barAway').style.width =
+    `${p.team2Win * 100}%`;
+
+  console.log("Multi-factor prediction:", result);
+}
 async function loadRatings() {
   try {
     const response = await fetch(`ratings.json?cacheBust=${Date.now()}`, { cache: 'no-store' });
