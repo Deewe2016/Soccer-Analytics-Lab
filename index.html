@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Soccer Analytics Lab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><span class="eyebrow">SOCCER ANALYTICS LAB</span><h1>Match Lab</h1><p>Explore team strength, expected results, and Elo ratings.</p></div><div class="ball">⚽</div></header>
+<main>
+<section class="card">
+<h2>Team comparison</h2>
+<div class="grid">
+<label>Home team<select id="home"></select></label>
+<label>Away team<select id="away"></select></label>
+</div>
+<div class="sliders">
+<label>Home Elo <output id="homeOut"></output><input id="homeElo" type="range" min="1200" max="2200" value="1750"></label>
+<label>Away Elo <output id="awayOut"></output><input id="awayElo" type="range" min="1200" max="2200" value="1650"></label>
+</div>
+<button id="analyze">Analyze match</button>
+</section>
+<section class="results">
+<div class="metric"><span>Home win</span><strong id="win">—</strong></div>
+<div class="metric"><span>Draw</span><strong id="draw">—</strong></div>
+<div class="metric"><span>Away win</span><strong id="loss">—</strong></div>
+</section>
+<section class="card">
+<h2>How the model works</h2>
+<p>The first version uses an Elo-based strength model. A 100-point rating advantage corresponds to a stronger expected result, while a small home-field advantage is added to the home team.</p>
+<div class="bar"><span id="barHome"></span><span id="barDraw"></span><span id="barAway"></span></div>
+<p class="muted">This is an educational model, not a prediction of an actual match.</p>
+</section>
+</main>
+<footer>Soccer Analytics Lab · v1.0</footer>
+<script src="script.js"></script>
+</body>
+</html>
