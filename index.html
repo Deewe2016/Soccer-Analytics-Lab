@@ -13,8 +13,21 @@
 <h2>Team comparison</h2>
 <p id="dataStatus" class="muted">Loading automatic Elo ratings…</p>
 <div class="grid">
-<label>Home team<select id="home"></select></label>
-<label>Away team<select id="away"></select></label>
+  <label>Team 1
+    <select id="home"></select>
+  </label>
+
+  <label>Team 2
+    <select id="away"></select>
+  </label>
+
+  <label>Venue
+    <select id="venue">
+      <option value="neutral" selected>Neutral</option>
+      <option value="home">Team 1 home</option>
+      <option value="away">Team 2 home</option>
+    </select>
+  </label>
 </div>
 <div class="sliders">
 <label>Home Elo <output id="homeOut"></output><input id="homeElo" type="range" min="1200" max="2200" value="1750"></label>
