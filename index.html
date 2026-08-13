@@ -7,20 +7,18 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div><span class="eyebrow">SOCCER ANALYTICS LAB</span><h1>Match Lab</h1><p>Explore team strength, expected results, and Elo ratings.</p></div><div class="ball">⚽</div></header>
+<header><div><span class="eyebrow">SOCCER ANALYTICS LAB</span><h1>Match Lab</h1><p>Explore team strength, expected results, and goal projections.</p></div><div class="ball">⚽</div></header>
 <main>
 <section class="card">
 <h2>Team comparison</h2>
-<p id="dataStatus" class="muted">Loading automatic Elo ratings…</p>
+<p id="dataStatus" class="muted">Loading automatic ratings…</p>
 <div class="grid">
   <label>Team 1
     <select id="home"></select>
   </label>
-
   <label>Team 2
     <select id="away"></select>
   </label>
-
   <label>Venue
     <select id="venue">
       <option value="neutral" selected>Neutral</option>
@@ -30,24 +28,29 @@
   </label>
 </div>
 <div class="sliders">
-<label>Home Elo <output id="homeOut"></output><input id="homeElo" type="range" min="1200" max="2200" value="1750"></label>
-<label>Away Elo <output id="awayOut"></output><input id="awayElo" type="range" min="1200" max="2200" value="1650"></label>
+<label>Team 1 Elo <output id="homeOut"></output><input id="homeElo" type="range" min="1200" max="2200" value="1750"></label>
+<label>Team 2 Elo <output id="awayOut"></output><input id="awayElo" type="range" min="1200" max="2200" value="1650"></label>
 </div>
 <button id="analyze">Analyze match</button>
 </section>
 <section class="results">
-<div class="metric"><span>Home win</span><strong id="win">—</strong></div>
+<div class="metric"><span>Team 1 win</span><strong id="win">—</strong></div>
 <div class="metric"><span>Draw</span><strong id="draw">—</strong></div>
-<div class="metric"><span>Away win</span><strong id="loss">—</strong></div>
+<div class="metric"><span>Team 2 win</span><strong id="loss">—</strong></div>
+</section>
+<section class="results">
+<div class="metric"><span>Team 1 expected goals</span><strong id="xgHome">—</strong></div>
+<div class="metric"><span>Team 2 expected goals</span><strong id="xgAway">—</strong></div>
+<div class="metric"><span>Most likely score</span><strong id="likelyScore">—</strong></div>
 </section>
 <section class="card">
 <h2>How the model works</h2>
-<p>The model uses Elo ratings to estimate relative team strength, then adds a small home-field advantage and converts the result into a three-way estimate.</p>
+<p>The model combines Elo with attacking and defensive indicators, chance creation, shots, possession, and recent form. It converts the resulting expected goals into scoreline and win/draw/loss probabilities.</p>
 <div class="bar"><span id="barHome"></span><span id="barDraw"></span><span id="barAway"></span></div>
-<p class="muted">This is an educational model, not a prediction of an actual match.</p>
+<p class="muted">This is an educational model. Its weights should be backtested against historical matches before treating it as a calibrated forecasting system.</p>
 </section>
 </main>
-<footer>Soccer Analytics Lab · v1.0</footer>
+<footer>Soccer Analytics Lab · v1.1</footer>
 <script src="model.js"></script>
 <script src="script.js"></script>
 </body>
