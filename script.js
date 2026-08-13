@@ -79,7 +79,86 @@ async function loadRatings() {
     const data = await response.json();
     if (!Array.isArray(data.teams) || data.teams.length === 0) throw new Error('No ratings');
 
-    teams = Object.fromEntries(data.teams.map(item => [item.team, Number(item.elo)]));
+    const countryNames = {
+  ES: "Spain",
+  AR: "Argentina",
+  EN: "England",
+  FR: "France",
+  CO: "Colombia",
+  PT: "Portugal",
+  BR: "Brazil",
+  NL: "Netherlands",
+  NO: "Norway",
+  BE: "Belgium",
+  CH: "Switzerland",
+  MX: "Mexico",
+  DE: "Germany",
+  MA: "Morocco",
+  JP: "Japan",
+  HR: "Croatia",
+  EC: "Ecuador",
+  DK: "Denmark",
+  IT: "Italy",
+  TR: "Turkey",
+  UY: "Uruguay",
+  AT: "Austria",
+  SN: "Senegal",
+  PY: "Paraguay",
+  AU: "Australia",
+  UA: "Ukraine",
+  RU: "Russia",
+  NG: "Nigeria",
+  IR: "Iran",
+  DZ: "Algeria",
+  US: "United States",
+  SQ: "Scotland",
+  GR: "Greece",
+  EG: "Egypt",
+  RS: "Serbia",
+  VE: "Venezuela",
+  SE: "Sweden",
+  CA: "Canada",
+  CI: "Ivory Coast",
+  KR: "South Korea",
+  CL: "Chile",
+  KO: "Kosovo",
+  HU: "Hungary",
+  PL: "Poland",
+  CD: "DR Congo",
+  PE: "Peru",
+  IE: "Ireland",
+  SI: "Slovenia",
+  WA: "Wales",
+  CZ: "Czech Republic",
+  SK: "Slovakia",
+  PA: "Panama",
+  GE: "Georgia",
+  IL: "Israel",
+  RO: "Romania",
+  UZ: "Uzbekistan",
+  JO: "Jordan",
+  BO: "Bolivia",
+  CV: "Cape Verde",
+  AL: "Albania",
+  CM: "Cameroon",
+  CR: "Costa Rica",
+  BA: "Bosnia and Herzegovina",
+  EI: "Ireland",
+  SA: "Saudi Arabia",
+  GH: "Ghana",
+  HN: "Honduras",
+  IS: "Iceland",
+  TN: "Tunisia",
+  IQ: "Iraq",
+  ZA: "South Africa"
+};
+
+teams = Object.fromEntries(
+  data.teams.map(item => [
+    countryNames[item.code] || item.team,
+    Number(item.elo)
+  ])
+);
     ratingsUpdatedAt = data.updatedAt;
     populateTeams();
 
