@@ -44,6 +44,15 @@
 <div class="metric"><span>Most likely score</span><strong id="likelyScore">—</strong></div>
 </section>
 <section class="card">
+<h2>Most likely scoreline</h2>
+<div class="scoreline" aria-live="polite">
+  <div class="score-team"><span id="scoreHomeName">Team 1</span><strong id="scoreHomeGoals">—</strong></div>
+  <div class="score-separator">–</div>
+  <div class="score-team"><span id="scoreAwayName">Team 2</span><strong id="scoreAwayGoals">—</strong></div>
+</div>
+<p class="muted" id="scoreExplanation">The scoreline above shows the predicted goals for each team.</p>
+</section>
+<section class="card">
 <h2>How the model works</h2>
 <p>The model combines Elo with attacking and defensive indicators, chance creation, shots, possession, and recent form. It converts the resulting expected goals into scoreline and win/draw/loss probabilities.</p>
 <div class="bar"><span id="barHome"></span><span id="barDraw"></span><span id="barAway"></span></div>
