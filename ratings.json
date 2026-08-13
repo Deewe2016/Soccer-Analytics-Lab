@@ -1,0 +1,1226 @@
+{
+  "source": "World Football Elo Ratings (eloratings.net)",
+  "updatedAt": "2026-08-13T15:57:55.375384+00:00",
+  "teams": [
+    {
+      "rank": 1,
+      "team": "ES",
+      "elo": 2259
+    },
+    {
+      "rank": 2,
+      "team": "AR",
+      "elo": 2173
+    },
+    {
+      "rank": 3,
+      "team": "EN",
+      "elo": 2125
+    },
+    {
+      "rank": 4,
+      "team": "FR",
+      "elo": 2070
+    },
+    {
+      "rank": 5,
+      "team": "CO",
+      "elo": 2003
+    },
+    {
+      "rank": 6,
+      "team": "PT",
+      "elo": 1995
+    },
+    {
+      "rank": 7,
+      "team": "BR",
+      "elo": 1993
+    },
+    {
+      "rank": 8,
+      "team": "NL",
+      "elo": 1971
+    },
+    {
+      "rank": 9,
+      "team": "NO",
+      "elo": 1952
+    },
+    {
+      "rank": 10,
+      "team": "BE",
+      "elo": 1947
+    },
+    {
+      "rank": 11,
+      "team": "CH",
+      "elo": 1928
+    },
+    {
+      "rank": 12,
+      "team": "MX",
+      "elo": 1913
+    },
+    {
+      "rank": 13,
+      "team": "DE",
+      "elo": 1908
+    },
+    {
+      "rank": 14,
+      "team": "MA",
+      "elo": 1901
+    },
+    {
+      "rank": 15,
+      "team": "JP",
+      "elo": 1888
+    },
+    {
+      "rank": 16,
+      "team": "HR",
+      "elo": 1881
+    },
+    {
+      "rank": 17,
+      "team": "EC",
+      "elo": 1871
+    },
+    {
+      "rank": 18,
+      "team": "DK",
+      "elo": 1869
+    },
+    {
+      "rank": 18,
+      "team": "IT",
+      "elo": 1869
+    },
+    {
+      "rank": 20,
+      "team": "TR",
+      "elo": 1852
+    },
+    {
+      "rank": 21,
+      "team": "UY",
+      "elo": 1841
+    },
+    {
+      "rank": 22,
+      "team": "AT",
+      "elo": 1821
+    },
+    {
+      "rank": 23,
+      "team": "SN",
+      "elo": 1816
+    },
+    {
+      "rank": 24,
+      "team": "PY",
+      "elo": 1814
+    },
+    {
+      "rank": 25,
+      "team": "AU",
+      "elo": 1795
+    },
+    {
+      "rank": 26,
+      "team": "UA",
+      "elo": 1780
+    },
+    {
+      "rank": 27,
+      "team": "RU",
+      "elo": 1772
+    },
+    {
+      "rank": 28,
+      "team": "NG",
+      "elo": 1767
+    },
+    {
+      "rank": 29,
+      "team": "IR",
+      "elo": 1764
+    },
+    {
+      "rank": 30,
+      "team": "DZ",
+      "elo": 1756
+    },
+    {
+      "rank": 31,
+      "team": "US",
+      "elo": 1747
+    },
+    {
+      "rank": 32,
+      "team": "SQ",
+      "elo": 1745
+    },
+    {
+      "rank": 33,
+      "team": "GR",
+      "elo": 1744
+    },
+    {
+      "rank": 34,
+      "team": "EG",
+      "elo": 1742
+    },
+    {
+      "rank": 35,
+      "team": "RS",
+      "elo": 1734
+    },
+    {
+      "rank": 36,
+      "team": "VE",
+      "elo": 1733
+    },
+    {
+      "rank": 37,
+      "team": "SE",
+      "elo": 1731
+    },
+    {
+      "rank": 38,
+      "team": "CA",
+      "elo": 1729
+    },
+    {
+      "rank": 39,
+      "team": "CI",
+      "elo": 1728
+    },
+    {
+      "rank": 40,
+      "team": "KR",
+      "elo": 1723
+    },
+    {
+      "rank": 41,
+      "team": "CL",
+      "elo": 1717
+    },
+    {
+      "rank": 42,
+      "team": "KO",
+      "elo": 1714
+    },
+    {
+      "rank": 43,
+      "team": "HU",
+      "elo": 1710
+    },
+    {
+      "rank": 43,
+      "team": "PL",
+      "elo": 1710
+    },
+    {
+      "rank": 45,
+      "team": "CD",
+      "elo": 1704
+    },
+    {
+      "rank": 46,
+      "team": "PE",
+      "elo": 1700
+    },
+    {
+      "rank": 47,
+      "team": "IE",
+      "elo": 1699
+    },
+    {
+      "rank": 48,
+      "team": "SI",
+      "elo": 1682
+    },
+    {
+      "rank": 48,
+      "team": "WA",
+      "elo": 1682
+    },
+    {
+      "rank": 50,
+      "team": "CZ",
+      "elo": 1680
+    },
+    {
+      "rank": 51,
+      "team": "SK",
+      "elo": 1667
+    },
+    {
+      "rank": 52,
+      "team": "PA",
+      "elo": 1658
+    },
+    {
+      "rank": 53,
+      "team": "GE",
+      "elo": 1654
+    },
+    {
+      "rank": 54,
+      "team": "IL",
+      "elo": 1647
+    },
+    {
+      "rank": 55,
+      "team": "RO",
+      "elo": 1639
+    },
+    {
+      "rank": 56,
+      "team": "UZ",
+      "elo": 1631
+    },
+    {
+      "rank": 57,
+      "team": "JO",
+      "elo": 1628
+    },
+    {
+      "rank": 58,
+      "team": "BO",
+      "elo": 1621
+    },
+    {
+      "rank": 59,
+      "team": "CV",
+      "elo": 1619
+    },
+    {
+      "rank": 60,
+      "team": "AL",
+      "elo": 1616
+    },
+    {
+      "rank": 61,
+      "team": "CM",
+      "elo": 1614
+    },
+    {
+      "rank": 62,
+      "team": "CR",
+      "elo": 1608
+    },
+    {
+      "rank": 63,
+      "team": "BA",
+      "elo": 1605
+    },
+    {
+      "rank": 63,
+      "team": "EI",
+      "elo": 1605
+    },
+    {
+      "rank": 65,
+      "team": "SA",
+      "elo": 1596
+    },
+    {
+      "rank": 66,
+      "team": "NM",
+      "elo": 1589
+    },
+    {
+      "rank": 67,
+      "team": "ML",
+      "elo": 1588
+    },
+    {
+      "rank": 68,
+      "team": "GH",
+      "elo": 1571
+    },
+    {
+      "rank": 69,
+      "team": "HN",
+      "elo": 1570
+    },
+    {
+      "rank": 70,
+      "team": "IS",
+      "elo": 1568
+    },
+    {
+      "rank": 71,
+      "team": "TN",
+      "elo": 1562
+    },
+    {
+      "rank": 72,
+      "team": "IQ",
+      "elo": 1560
+    },
+    {
+      "rank": 72,
+      "team": "ZA",
+      "elo": 1560
+    },
+    {
+      "rank": 74,
+      "team": "AO",
+      "elo": 1542
+    },
+    {
+      "rank": 75,
+      "team": "AE",
+      "elo": 1540
+    },
+    {
+      "rank": 76,
+      "team": "FI",
+      "elo": 1535
+    },
+    {
+      "rank": 77,
+      "team": "NZ",
+      "elo": 1534
+    },
+    {
+      "rank": 78,
+      "team": "BF",
+      "elo": 1529
+    },
+    {
+      "rank": 79,
+      "team": "JM",
+      "elo": 1527
+    },
+    {
+      "rank": 80,
+      "team": "BY",
+      "elo": 1522
+    },
+    {
+      "rank": 81,
+      "team": "HT",
+      "elo": 1517
+    },
+    {
+      "rank": 82,
+      "team": "GT",
+      "elo": 1504
+    },
+    {
+      "rank": 83,
+      "team": "OM",
+      "elo": 1479
+    },
+    {
+      "rank": 83,
+      "team": "SY",
+      "elo": 1479
+    },
+    {
+      "rank": 85,
+      "team": "PS",
+      "elo": 1465
+    },
+    {
+      "rank": 86,
+      "team": "GN",
+      "elo": 1464
+    },
+    {
+      "rank": 87,
+      "team": "ME",
+      "elo": 1461
+    },
+    {
+      "rank": 88,
+      "team": "BG",
+      "elo": 1458
+    },
+    {
+      "rank": 89,
+      "team": "LU",
+      "elo": 1450
+    },
+    {
+      "rank": 90,
+      "team": "NS",
+      "elo": 1442
+    },
+    {
+      "rank": 91,
+      "team": "CW",
+      "elo": 1438
+    },
+    {
+      "rank": 92,
+      "team": "SR",
+      "elo": 1431
+    },
+    {
+      "rank": 93,
+      "team": "KZ",
+      "elo": 1428
+    },
+    {
+      "rank": 94,
+      "team": "CN",
+      "elo": 1424
+    },
+    {
+      "rank": 94,
+      "team": "KD",
+      "elo": 1424
+    },
+    {
+      "rank": 96,
+      "team": "LY",
+      "elo": 1420
+    },
+    {
+      "rank": 97,
+      "team": "GM",
+      "elo": 1419
+    },
+    {
+      "rank": 98,
+      "team": "BH",
+      "elo": 1414
+    },
+    {
+      "rank": 99,
+      "team": "QA",
+      "elo": 1411
+    },
+    {
+      "rank": 100,
+      "team": "TH",
+      "elo": 1409
+    },
+    {
+      "rank": 101,
+      "team": "BJ",
+      "elo": 1406
+    },
+    {
+      "rank": 102,
+      "team": "GA",
+      "elo": 1401
+    },
+    {
+      "rank": 103,
+      "team": "UG",
+      "elo": 1394
+    },
+    {
+      "rank": 104,
+      "team": "VN",
+      "elo": 1391
+    },
+    {
+      "rank": 105,
+      "team": "FO",
+      "elo": 1386
+    },
+    {
+      "rank": 105,
+      "team": "TT",
+      "elo": 1386
+    },
+    {
+      "rank": 107,
+      "team": "NE",
+      "elo": 1382
+    },
+    {
+      "rank": 108,
+      "team": "GQ",
+      "elo": 1380
+    },
+    {
+      "rank": 108,
+      "team": "MG",
+      "elo": 1380
+    },
+    {
+      "rank": 110,
+      "team": "TG",
+      "elo": 1379
+    },
+    {
+      "rank": 111,
+      "team": "KP",
+      "elo": 1375
+    },
+    {
+      "rank": 112,
+      "team": "KM",
+      "elo": 1374
+    },
+    {
+      "rank": 113,
+      "team": "AM",
+      "elo": 1373
+    },
+    {
+      "rank": 114,
+      "team": "ZW",
+      "elo": 1372
+    },
+    {
+      "rank": 115,
+      "team": "ZM",
+      "elo": 1371
+    },
+    {
+      "rank": 116,
+      "team": "KE",
+      "elo": 1363
+    },
+    {
+      "rank": 117,
+      "team": "EE",
+      "elo": 1360
+    },
+    {
+      "rank": 118,
+      "team": "SD",
+      "elo": 1350
+    },
+    {
+      "rank": 119,
+      "team": "RE",
+      "elo": 1345
+    },
+    {
+      "rank": 120,
+      "team": "MZ",
+      "elo": 1342
+    },
+    {
+      "rank": 120,
+      "team": "SL",
+      "elo": 1342
+    },
+    {
+      "rank": 120,
+      "team": "SV",
+      "elo": 1342
+    },
+    {
+      "rank": 123,
+      "team": "GP",
+      "elo": 1338
+    },
+    {
+      "rank": 124,
+      "team": "RW",
+      "elo": 1337
+    },
+    {
+      "rank": 125,
+      "team": "NI",
+      "elo": 1333
+    },
+    {
+      "rank": 126,
+      "team": "KW",
+      "elo": 1332
+    },
+    {
+      "rank": 127,
+      "team": "MR",
+      "elo": 1329
+    },
+    {
+      "rank": 128,
+      "team": "ID",
+      "elo": 1323
+    },
+    {
+      "rank": 129,
+      "team": "AZ",
+      "elo": 1322
+    },
+    {
+      "rank": 130,
+      "team": "ZN",
+      "elo": 1320
+    },
+    {
+      "rank": 131,
+      "team": "CY",
+      "elo": 1314
+    },
+    {
+      "rank": 132,
+      "team": "TZ",
+      "elo": 1313
+    },
+    {
+      "rank": 133,
+      "team": "MQ",
+      "elo": 1312
+    },
+    {
+      "rank": 134,
+      "team": "LR",
+      "elo": 1304
+    },
+    {
+      "rank": 135,
+      "team": "NA",
+      "elo": 1303
+    },
+    {
+      "rank": 136,
+      "team": "KG",
+      "elo": 1295
+    },
+    {
+      "rank": 136,
+      "team": "MY",
+      "elo": 1295
+    },
+    {
+      "rank": 138,
+      "team": "GY",
+      "elo": 1293
+    },
+    {
+      "rank": 139,
+      "team": "LB",
+      "elo": 1288
+    },
+    {
+      "rank": 139,
+      "team": "LV",
+      "elo": 1288
+    },
+    {
+      "rank": 141,
+      "team": "ET",
+      "elo": 1287
+    },
+    {
+      "rank": 142,
+      "team": "BI",
+      "elo": 1286
+    },
+    {
+      "rank": 142,
+      "team": "NC",
+      "elo": 1286
+    },
+    {
+      "rank": 144,
+      "team": "TJ",
+      "elo": 1284
+    },
+    {
+      "rank": 145,
+      "team": "DO",
+      "elo": 1283
+    },
+    {
+      "rank": 146,
+      "team": "LT",
+      "elo": 1279
+    },
+    {
+      "rank": 147,
+      "team": "MD",
+      "elo": 1270
+    },
+    {
+      "rank": 148,
+      "team": "BW",
+      "elo": 1267
+    },
+    {
+      "rank": 149,
+      "team": "MT",
+      "elo": 1255
+    },
+    {
+      "rank": 150,
+      "team": "GW",
+      "elo": 1248
+    },
+    {
+      "rank": 151,
+      "team": "CU",
+      "elo": 1239
+    },
+    {
+      "rank": 151,
+      "team": "MW",
+      "elo": 1239
+    },
+    {
+      "rank": 153,
+      "team": "CF",
+      "elo": 1236
+    },
+    {
+      "rank": 154,
+      "team": "GF",
+      "elo": 1223
+    },
+    {
+      "rank": 155,
+      "team": "YT",
+      "elo": 1216
+    },
+    {
+      "rank": 156,
+      "team": "TM",
+      "elo": 1209
+    },
+    {
+      "rank": 157,
+      "team": "CG",
+      "elo": 1207
+    },
+    {
+      "rank": 158,
+      "team": "ER",
+      "elo": 1202
+    },
+    {
+      "rank": 159,
+      "team": "LS",
+      "elo": 1198
+    },
+    {
+      "rank": 160,
+      "team": "YE",
+      "elo": 1195
+    },
+    {
+      "rank": 161,
+      "team": "TI",
+      "elo": 1177
+    },
+    {
+      "rank": 162,
+      "team": "SG",
+      "elo": 1166
+    },
+    {
+      "rank": 163,
+      "team": "SW",
+      "elo": 1149
+    },
+    {
+      "rank": 164,
+      "team": "VC",
+      "elo": 1141
+    },
+    {
+      "rank": 165,
+      "team": "PG",
+      "elo": 1135
+    },
+    {
+      "rank": 165,
+      "team": "PR",
+      "elo": 1135
+    },
+    {
+      "rank": 167,
+      "team": "IN",
+      "elo": 1128
+    },
+    {
+      "rank": 168,
+      "team": "BM",
+      "elo": 1117
+    },
+    {
+      "rank": 168,
+      "team": "VU",
+      "elo": 1117
+    },
+    {
+      "rank": 170,
+      "team": "PH",
+      "elo": 1112
+    },
+    {
+      "rank": 171,
+      "team": "SS",
+      "elo": 1109
+    },
+    {
+      "rank": 172,
+      "team": "FJ",
+      "elo": 1104
+    },
+    {
+      "rank": 173,
+      "team": "HK",
+      "elo": 1100
+    },
+    {
+      "rank": 174,
+      "team": "GD",
+      "elo": 1098
+    },
+    {
+      "rank": 175,
+      "team": "AD",
+      "elo": 1080
+    },
+    {
+      "rank": 176,
+      "team": "BZ",
+      "elo": 1073
+    },
+    {
+      "rank": 176,
+      "team": "MU",
+      "elo": 1073
+    },
+    {
+      "rank": 176,
+      "team": "TD",
+      "elo": 1073
+    },
+    {
+      "rank": 179,
+      "team": "SB",
+      "elo": 1054
+    },
+    {
+      "rank": 180,
+      "team": "MF",
+      "elo": 1043
+    },
+    {
+      "rank": 181,
+      "team": "MM",
+      "elo": 1035
+    },
+    {
+      "rank": 181,
+      "team": "ST",
+      "elo": 1035
+    },
+    {
+      "rank": 183,
+      "team": "KN",
+      "elo": 1030
+    },
+    {
+      "rank": 184,
+      "team": "GI",
+      "elo": 1011
+    },
+    {
+      "rank": 185,
+      "team": "JS",
+      "elo": 1005
+    },
+    {
+      "rank": 186,
+      "team": "LC",
+      "elo": 1003
+    },
+    {
+      "rank": 187,
+      "team": "EH",
+      "elo": 996
+    },
+    {
+      "rank": 188,
+      "team": "AW",
+      "elo": 979
+    },
+    {
+      "rank": 188,
+      "team": "SO",
+      "elo": 979
+    },
+    {
+      "rank": 190,
+      "team": "SX",
+      "elo": 974
+    },
+    {
+      "rank": 191,
+      "team": "MS",
+      "elo": 972
+    },
+    {
+      "rank": 192,
+      "team": "AF",
+      "elo": 961
+    },
+    {
+      "rank": 193,
+      "team": "GL",
+      "elo": 945
+    },
+    {
+      "rank": 194,
+      "team": "BD",
+      "elo": 942
+    },
+    {
+      "rank": 195,
+      "team": "DJ",
+      "elo": 941
+    },
+    {
+      "rank": 196,
+      "team": "DM",
+      "elo": 935
+    },
+    {
+      "rank": 197,
+      "team": "PK",
+      "elo": 911
+    },
+    {
+      "rank": 198,
+      "team": "MC",
+      "elo": 903
+    },
+    {
+      "rank": 199,
+      "team": "BB",
+      "elo": 898
+    },
+    {
+      "rank": 200,
+      "team": "AG",
+      "elo": 895
+    },
+    {
+      "rank": 200,
+      "team": "LI",
+      "elo": 895
+    },
+    {
+      "rank": 202,
+      "team": "NP",
+      "elo": 893
+    },
+    {
+      "rank": 203,
+      "team": "KH",
+      "elo": 871
+    },
+    {
+      "rank": 204,
+      "team": "SC",
+      "elo": 853
+    },
+    {
+      "rank": 205,
+      "team": "LK",
+      "elo": 836
+    },
+    {
+      "rank": 206,
+      "team": "SM",
+      "elo": 825
+    },
+    {
+      "rank": 207,
+      "team": "TW",
+      "elo": 821
+    },
+    {
+      "rank": 208,
+      "team": "BQ",
+      "elo": 816
+    },
+    {
+      "rank": 209,
+      "team": "KY",
+      "elo": 800
+    },
+    {
+      "rank": 209,
+      "team": "MV",
+      "elo": 800
+    },
+    {
+      "rank": 211,
+      "team": "HG",
+      "elo": 782
+    },
+    {
+      "rank": 212,
+      "team": "TV",
+      "elo": 756
+    },
+    {
+      "rank": 213,
+      "team": "VG",
+      "elo": 743
+    },
+    {
+      "rank": 214,
+      "team": "EU",
+      "elo": 737
+    },
+    {
+      "rank": 215,
+      "team": "WS",
+      "elo": 728
+    },
+    {
+      "rank": 216,
+      "team": "MN",
+      "elo": 726
+    },
+    {
+      "rank": 217,
+      "team": "BL",
+      "elo": 725
+    },
+    {
+      "rank": 218,
+      "team": "LA",
+      "elo": 712
+    },
+    {
+      "rank": 218,
+      "team": "TL",
+      "elo": 712
+    },
+    {
+      "rank": 220,
+      "team": "GU",
+      "elo": 705
+    },
+    {
+      "rank": 221,
+      "team": "WF",
+      "elo": 699
+    },
+    {
+      "rank": 222,
+      "team": "VA",
+      "elo": 692
+    },
+    {
+      "rank": 223,
+      "team": "AB",
+      "elo": 691
+    },
+    {
+      "rank": 224,
+      "team": "BS",
+      "elo": 685
+    },
+    {
+      "rank": 225,
+      "team": "PM",
+      "elo": 677
+    },
+    {
+      "rank": 226,
+      "team": "TC",
+      "elo": 657
+    },
+    {
+      "rank": 227,
+      "team": "AI",
+      "elo": 646
+    },
+    {
+      "rank": 228,
+      "team": "TE",
+      "elo": 628
+    },
+    {
+      "rank": 229,
+      "team": "VI",
+      "elo": 627
+    },
+    {
+      "rank": 230,
+      "team": "BT",
+      "elo": 622
+    },
+    {
+      "rank": 230,
+      "team": "CK",
+      "elo": 622
+    },
+    {
+      "rank": 232,
+      "team": "MO",
+      "elo": 589
+    },
+    {
+      "rank": 233,
+      "team": "CX",
+      "elo": 578
+    },
+    {
+      "rank": 234,
+      "team": "BN",
+      "elo": 571
+    },
+    {
+      "rank": 234,
+      "team": "FK",
+      "elo": 571
+    },
+    {
+      "rank": 236,
+      "team": "FM",
+      "elo": 564
+    },
+    {
+      "rank": 237,
+      "team": "MH",
+      "elo": 559
+    },
+    {
+      "rank": 238,
+      "team": "KI",
+      "elo": 544
+    },
+    {
+      "rank": 239,
+      "team": "TO",
+      "elo": 520
+    },
+    {
+      "rank": 240,
+      "team": "NU",
+      "elo": 496
+    },
+    {
+      "rank": 241,
+      "team": "MP",
+      "elo": 432
+    },
+    {
+      "rank": 242,
+      "team": "CC",
+      "elo": 422
+    },
+    {
+      "rank": 243,
+      "team": "PW",
+      "elo": 402
+    },
+    {
+      "rank": 244,
+      "team": "AS",
+      "elo": 370
+    }
+  ]
+}
