@@ -11,6 +11,7 @@
 <main>
 <section class="card">
 <h2>Team comparison</h2>
+<p id="dataStatus" class="muted">Loading automatic Elo ratings…</p>
 <div class="grid">
 <label>Home team<select id="home"></select></label>
 <label>Away team<select id="away"></select></label>
@@ -28,7 +29,7 @@
 </section>
 <section class="card">
 <h2>How the model works</h2>
-<p>The first version uses an Elo-based strength model. A 100-point rating advantage corresponds to a stronger expected result, while a small home-field advantage is added to the home team.</p>
+<p>The model uses Elo ratings to estimate relative team strength, then adds a small home-field advantage and converts the result into a three-way estimate.</p>
 <div class="bar"><span id="barHome"></span><span id="barDraw"></span><span id="barAway"></span></div>
 <p class="muted">This is an educational model, not a prediction of an actual match.</p>
 </section>
