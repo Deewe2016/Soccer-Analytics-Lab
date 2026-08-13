@@ -18,11 +18,39 @@ jobs:
       - name: Download World Football Elo ratings
         run: curl --fail --location --retry 3 --output World.tsv https://www.eloratings.net/World.tsv
 
+      - name: Install country-name lookup
+        run: python -m pip install pycountry
+
       - name: Convert TSV to JSON
         run: |
           python - <<'PY'
           import csv, json
           from datetime import datetime, timezone
+          import pycountry
+
+          # World Football Elo uses a few custom two-letter codes for
+          # football associations that are not ISO country codes.
+          custom_names = {
+              "EN": "England",
+              "WA": "Wales",
+              "SQ": "Scotland",
+              "EI": "Ireland",
+              "KO": "Kosovo",
+              "CD": "Democratic Republic of the Congo",
+              "PS": "Palestine",
+              "BA": "Bosnia and Herzegovina",
+              "RE": "Réunion",
+              "NS": "Northern Cyprus",
+          }
+
+          def full_name(code):
+              code = code.strip().upper()
+              if code in custom_names:
+                  return custom_names[code]
+              country = pycountry.countries.get(alpha_2=code)
+              if country:
+                  return getattr(country, "common_name", None) or country.name
+              return code
 
           rows = []
           with open("World.tsv", newline="", encoding="utf-8") as f:
@@ -32,12 +60,12 @@ jobs:
                       continue
                   try:
                       rank = int(row[0])
-                      team = row[2].strip()
+                      code = row[2].strip()
                       elo = int(float(row[3]))
                   except (ValueError, TypeError):
                       continue
-                  if team:
-                      rows.append({"rank": rank, "team": team, "elo": elo})
+                  if code:
+                      rows.append({"rank": rank, "team": full_name(code), "code": code, "elo": elo})
 
           rows.sort(key=lambda x: (x["rank"], x["team"]))
           payload = {
