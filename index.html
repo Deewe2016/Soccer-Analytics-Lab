@@ -1,52 +1,14 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Soccer Analytics Lab</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Soccer Analytics Lab</title><link rel="stylesheet" href="style.css"></head>
 <body>
 <header><div><span class="eyebrow">SOCCER ANALYTICS LAB</span><h1 id="title">Match Lab</h1><p id="subtitle">Explore team strength, expected results, and goal projections.</p></div><div><button id="languageToggle" type="button">中文</button><div class="ball">⚽</div></div></header>
-<main>
-<section class="card">
-<h2 id="comparisonTitle">Team comparison</h2>
-<p id="dataStatus" class="muted">Loading automatic ratings…</p>
-<div class="grid">
-  <label><span id="team1Label">Team 1</span><select id="home"></select></label>
-  <label><span id="team2Label">Team 2</span><select id="away"></select></label>
-  <label><span id="venueLabel">Venue</span><select id="venue"><option value="neutral" selected>Neutral</option><option value="home">Team 1 home</option><option value="away">Team 2 home</option></select></label>
-</div>
-<div class="sliders">
-<label><span id="team1EloLabel">Team 1 Elo</span> <output id="homeOut"></output><input id="homeElo" type="range" min="1200" max="2200" value="1750"></label>
-<label><span id="team2EloLabel">Team 2 Elo</span> <output id="awayOut"></output><input id="awayElo" type="range" min="1200" max="2200" value="1650"></label>
-</div>
-<button id="analyze">Analyze match</button>
-</section>
-<section class="results">
-<div class="metric"><span id="team1WinLabel">Team 1 win</span><strong id="win">—</strong></div>
-<div class="metric"><span id="drawLabel">Draw</span><strong id="draw">—</strong></div>
-<div class="metric"><span id="team2WinLabel">Team 2 win</span><strong id="loss">—</strong></div>
-</section>
-<section class="results">
-<div class="metric"><span id="team1XgLabel">Team 1 expected goals</span><strong id="xgHome">—</strong></div>
-<div class="metric"><span id="team2XgLabel">Team 2 expected goals</span><strong id="xgAway">—</strong></div>
-<div class="metric"><span id="likelyScoreLabel">Most likely score</span><strong id="likelyScore">—</strong></div>
-</section>
-<section class="card">
-<h2 id="scorelineTitle">Most likely scoreline</h2>
-<div class="scoreline" aria-live="polite"><div class="score-team"><span id="scoreHomeName">Team 1</span><strong id="scoreHomeGoals">—</strong></div><div class="score-separator">–</div><div class="score-team"><span id="scoreAwayName">Team 2</span><strong id="scoreAwayGoals">—</strong></div></div>
-<p class="muted" id="scoreExplanation">The scoreline above shows the predicted goals for each team.</p>
-</section>
-<section class="card">
-<h2 id="howTitle">How the model works</h2>
-<p id="howText">The model combines Elo with attacking and defensive indicators, chance creation, shots, possession, and recent form. It converts the resulting expected goals into scoreline and win/draw/loss probabilities.</p>
-<div class="bar"><span id="barHome"></span><span id="barDraw"></span><span id="barAway"></span></div>
-<p class="muted" id="disclaimer">This is an educational model. Its weights should be backtested against historical matches before treating it as a calibrated forecasting system.</p>
-</section>
-</main>
-<footer id="footer">Soccer Analytics Lab · v1.2</footer>
-<script src="model.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+<main><section class="card"><h2 id="comparisonTitle">Team comparison</h2><p id="dataStatus" class="muted">Loading automatic ratings…</p>
+<div class="team-searches"><label><span id="search1Label">Search Team 1</span><input id="homeSearch" type="search" placeholder="Type a team name…" autocomplete="off"></label><label><span id="search2Label">Search Team 2</span><input id="awaySearch" type="search" placeholder="Type a team name…" autocomplete="off"></label></div>
+<div class="grid"><label><span id="team1Label">Team 1</span><select id="home"></select></label><label><span id="team2Label">Team 2</span><select id="away"></select></label><label><span id="venueLabel">Venue</span><select id="venue"><option value="neutral" selected>Neutral</option><option value="home">Team 1 home</option><option value="away">Team 2 home</option></select></label></div>
+<div class="sliders"><label><span id="team1EloLabel">Team 1 Elo</span> <output id="homeOut"></output><input id="homeElo" type="range" min="1200" max="2200" value="1750"></label><label><span id="team2EloLabel">Team 2 Elo</span> <output id="awayOut"></output><input id="awayElo" type="range" min="1200" max="2200" value="1650"></label></div><button id="analyze">Analyze match</button></section>
+<section class="results"><div class="metric"><span id="team1WinLabel">Team 1 win</span><strong id="win">—</strong></div><div class="metric"><span id="drawLabel">Draw</span><strong id="draw">—</strong></div><div class="metric"><span id="team2WinLabel">Team 2 win</span><strong id="loss">—</strong></div></section>
+<section class="results"><div class="metric"><span id="team1XgLabel">Team 1 expected goals</span><strong id="xgHome">—</strong></div><div class="metric"><span id="team2XgLabel">Team 2 expected goals</span><strong id="xgAway">—</strong></div><div class="metric"><span id="likelyScoreLabel">Most likely score</span><strong id="likelyScore">—</strong></div></section>
+<section class="card"><h2 id="scorelineTitle">Most likely scoreline</h2><div class="scoreline" aria-live="polite"><div class="score-team"><span id="scoreHomeName">Team 1</span><strong id="scoreHomeGoals">—</strong></div><div class="score-separator">–</div><div class="score-team"><span id="scoreAwayName">Team 2</span><strong id="scoreAwayGoals">—</strong></div></div><p class="muted" id="scoreExplanation">The scoreline above shows the predicted goals for each team.</p></section>
+<section class="card"><h2 id="howTitle">How the model works</h2><p id="howText">The model combines Elo with attacking and defensive indicators, chance creation, shots, possession, and recent form. It converts the resulting expected goals into scoreline and win/draw/loss probabilities.</p><div class="bar"><span id="barHome"></span><span id="barDraw"></span><span id="barAway"></span></div><p class="muted" id="disclaimer">This is an educational model. Its weights should be backtested against historical matches before treating it as a calibrated forecasting system.</p></section></main><footer id="footer">Soccer Analytics Lab · v1.3</footer>
+<script src="model.js"></script><script src="script.js"></script><script src="search.js"></script></body></html>
