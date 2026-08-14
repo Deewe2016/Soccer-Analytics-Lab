@@ -1,23 +1,5 @@
-function setupTeamSearch(inputId, selectId) {
-  const input = document.getElementById(inputId);
-  const select = document.getElementById(selectId);
-  if (!input || !select) return;
-
-  input.addEventListener('input', () => {
-    const query = input.value.trim().toLowerCase();
-    for (const option of select.options) {
-      option.hidden = query !== '' && !option.textContent.toLowerCase().includes(query);
-    }
-    const current = select.selectedOptions[0];
-    if (query && (!current || current.hidden)) {
-      const firstMatch = [...select.options].find(option => !option.hidden);
-      if (firstMatch) {
-        select.value = firstMatch.value;
-        select.dispatchEvent(new Event('change'));
-      }
-    }
-  });
-}
-
-setupTeamSearch('homeSearch', 'home');
-setupTeamSearch('awaySearch', 'away');
+function setupTeamSearch(inputId,selectId){const input=document.getElementById(inputId),select=document.getElementById(selectId);if(!input||!select)return;input.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();for(const option of select.options)option.hidden=q!==''&&!option.textContent.toLowerCase().includes(q);const current=select.selectedOptions[0];if(q&&(!current||current.hidden)){const first=[...select.options].find(o=>!o.hidden);if(first){select.value=first.value;select.dispatchEvent(new Event('change'));}}});}
+setupTeamSearch('homeSearch','home');setupTeamSearch('awaySearch','away');
+function updateSearchLanguage(){const zh=document.documentElement.lang==='zh-CN';const labels=[['search1Label',zh?'搜索球队 1':'Search Team 1'],['search2Label',zh?'搜索球队 2':'Search Team 2']];labels.forEach(([id,text])=>{const el=document.getElementById(id);if(el)el.textContent=text;});const h=document.getElementById('homeSearch'),a=document.getElementById('awaySearch');if(h)h.placeholder=zh?'输入球队名称…':'Type a team name…';if(a)a.placeholder=zh?'输入球队名称…':'Type a team name…';}
+updateSearchLanguage();
+new MutationObserver(updateSearchLanguage).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
