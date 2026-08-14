@@ -1,1225 +1,1469 @@
 {
   "source": "World Football Elo Ratings (eloratings.net)",
-  "updatedAt": "2026-08-13T15:58:13.499578+00:00",
+  "updatedAt": "2026-08-14T08:02:51.630779+00:00",
   "teams": [
     {
       "rank": 1,
-      "team": "ES",
+      "team": "Spain",
+      "code": "ES",
       "elo": 2259
     },
     {
       "rank": 2,
-      "team": "AR",
+      "team": "Argentina",
+      "code": "AR",
       "elo": 2173
     },
     {
       "rank": 3,
-      "team": "EN",
+      "team": "England",
+      "code": "EN",
       "elo": 2125
     },
     {
       "rank": 4,
-      "team": "FR",
+      "team": "France",
+      "code": "FR",
       "elo": 2070
     },
     {
       "rank": 5,
-      "team": "CO",
+      "team": "Colombia",
+      "code": "CO",
       "elo": 2003
     },
     {
       "rank": 6,
-      "team": "PT",
+      "team": "Portugal",
+      "code": "PT",
       "elo": 1995
     },
     {
       "rank": 7,
-      "team": "BR",
+      "team": "Brazil",
+      "code": "BR",
       "elo": 1993
     },
     {
       "rank": 8,
-      "team": "NL",
+      "team": "Netherlands",
+      "code": "NL",
       "elo": 1971
     },
     {
       "rank": 9,
-      "team": "NO",
+      "team": "Norway",
+      "code": "NO",
       "elo": 1952
     },
     {
       "rank": 10,
-      "team": "BE",
+      "team": "Belgium",
+      "code": "BE",
       "elo": 1947
     },
     {
       "rank": 11,
-      "team": "CH",
+      "team": "Switzerland",
+      "code": "CH",
       "elo": 1928
     },
     {
       "rank": 12,
-      "team": "MX",
+      "team": "Mexico",
+      "code": "MX",
       "elo": 1913
     },
     {
       "rank": 13,
-      "team": "DE",
+      "team": "Germany",
+      "code": "DE",
       "elo": 1908
     },
     {
       "rank": 14,
-      "team": "MA",
+      "team": "Morocco",
+      "code": "MA",
       "elo": 1901
     },
     {
       "rank": 15,
-      "team": "JP",
+      "team": "Japan",
+      "code": "JP",
       "elo": 1888
     },
     {
       "rank": 16,
-      "team": "HR",
+      "team": "Croatia",
+      "code": "HR",
       "elo": 1881
     },
     {
       "rank": 17,
-      "team": "EC",
+      "team": "Ecuador",
+      "code": "EC",
       "elo": 1871
     },
     {
       "rank": 18,
-      "team": "DK",
+      "team": "Denmark",
+      "code": "DK",
       "elo": 1869
     },
     {
       "rank": 18,
-      "team": "IT",
+      "team": "Italy",
+      "code": "IT",
       "elo": 1869
     },
     {
       "rank": 20,
-      "team": "TR",
+      "team": "Türkiye",
+      "code": "TR",
       "elo": 1852
     },
     {
       "rank": 21,
-      "team": "UY",
+      "team": "Uruguay",
+      "code": "UY",
       "elo": 1841
     },
     {
       "rank": 22,
-      "team": "AT",
+      "team": "Austria",
+      "code": "AT",
       "elo": 1821
     },
     {
       "rank": 23,
-      "team": "SN",
+      "team": "Senegal",
+      "code": "SN",
       "elo": 1816
     },
     {
       "rank": 24,
-      "team": "PY",
+      "team": "Paraguay",
+      "code": "PY",
       "elo": 1814
     },
     {
       "rank": 25,
-      "team": "AU",
+      "team": "Australia",
+      "code": "AU",
       "elo": 1795
     },
     {
       "rank": 26,
-      "team": "UA",
+      "team": "Ukraine",
+      "code": "UA",
       "elo": 1780
     },
     {
       "rank": 27,
-      "team": "RU",
+      "team": "Russian Federation",
+      "code": "RU",
       "elo": 1772
     },
     {
       "rank": 28,
-      "team": "NG",
+      "team": "Nigeria",
+      "code": "NG",
       "elo": 1767
     },
     {
       "rank": 29,
-      "team": "IR",
+      "team": "Iran",
+      "code": "IR",
       "elo": 1764
     },
     {
       "rank": 30,
-      "team": "DZ",
+      "team": "Algeria",
+      "code": "DZ",
       "elo": 1756
     },
     {
       "rank": 31,
-      "team": "US",
+      "team": "United States",
+      "code": "US",
       "elo": 1747
     },
     {
       "rank": 32,
-      "team": "SQ",
+      "team": "Scotland",
+      "code": "SQ",
       "elo": 1745
     },
     {
       "rank": 33,
-      "team": "GR",
+      "team": "Greece",
+      "code": "GR",
       "elo": 1744
     },
     {
       "rank": 34,
-      "team": "EG",
+      "team": "Egypt",
+      "code": "EG",
       "elo": 1742
     },
     {
       "rank": 35,
-      "team": "RS",
+      "team": "Serbia",
+      "code": "RS",
       "elo": 1734
     },
     {
       "rank": 36,
-      "team": "VE",
+      "team": "Venezuela",
+      "code": "VE",
       "elo": 1733
     },
     {
       "rank": 37,
-      "team": "SE",
+      "team": "Sweden",
+      "code": "SE",
       "elo": 1731
     },
     {
       "rank": 38,
-      "team": "CA",
+      "team": "Canada",
+      "code": "CA",
       "elo": 1729
     },
     {
       "rank": 39,
-      "team": "CI",
+      "team": "Côte d'Ivoire",
+      "code": "CI",
       "elo": 1728
     },
     {
       "rank": 40,
-      "team": "KR",
+      "team": "South Korea",
+      "code": "KR",
       "elo": 1723
     },
     {
       "rank": 41,
-      "team": "CL",
+      "team": "Chile",
+      "code": "CL",
       "elo": 1717
     },
     {
       "rank": 42,
-      "team": "KO",
+      "team": "Kosovo",
+      "code": "KO",
       "elo": 1714
     },
     {
       "rank": 43,
-      "team": "HU",
+      "team": "Hungary",
+      "code": "HU",
       "elo": 1710
     },
     {
       "rank": 43,
-      "team": "PL",
+      "team": "Poland",
+      "code": "PL",
       "elo": 1710
     },
     {
       "rank": 45,
-      "team": "CD",
+      "team": "Democratic Republic of the Congo",
+      "code": "CD",
       "elo": 1704
     },
     {
       "rank": 46,
-      "team": "PE",
+      "team": "Peru",
+      "code": "PE",
       "elo": 1700
     },
     {
       "rank": 47,
-      "team": "IE",
+      "team": "Ireland",
+      "code": "IE",
       "elo": 1699
     },
     {
       "rank": 48,
-      "team": "SI",
+      "team": "Slovenia",
+      "code": "SI",
       "elo": 1682
     },
     {
       "rank": 48,
-      "team": "WA",
+      "team": "Wales",
+      "code": "WA",
       "elo": 1682
     },
     {
       "rank": 50,
-      "team": "CZ",
+      "team": "Czechia",
+      "code": "CZ",
       "elo": 1680
     },
     {
       "rank": 51,
-      "team": "SK",
+      "team": "Slovakia",
+      "code": "SK",
       "elo": 1667
     },
     {
       "rank": 52,
-      "team": "PA",
+      "team": "Panama",
+      "code": "PA",
       "elo": 1658
     },
     {
       "rank": 53,
-      "team": "GE",
+      "team": "Georgia",
+      "code": "GE",
       "elo": 1654
     },
     {
       "rank": 54,
-      "team": "IL",
+      "team": "Israel",
+      "code": "IL",
       "elo": 1647
     },
     {
       "rank": 55,
-      "team": "RO",
+      "team": "Romania",
+      "code": "RO",
       "elo": 1639
     },
     {
       "rank": 56,
-      "team": "UZ",
+      "team": "Uzbekistan",
+      "code": "UZ",
       "elo": 1631
     },
     {
       "rank": 57,
-      "team": "JO",
+      "team": "Jordan",
+      "code": "JO",
       "elo": 1628
     },
     {
       "rank": 58,
-      "team": "BO",
+      "team": "Bolivia",
+      "code": "BO",
       "elo": 1621
     },
     {
       "rank": 59,
-      "team": "CV",
+      "team": "Cabo Verde",
+      "code": "CV",
       "elo": 1619
     },
     {
       "rank": 60,
-      "team": "AL",
+      "team": "Albania",
+      "code": "AL",
       "elo": 1616
     },
     {
       "rank": 61,
-      "team": "CM",
+      "team": "Cameroon",
+      "code": "CM",
       "elo": 1614
     },
     {
       "rank": 62,
-      "team": "CR",
+      "team": "Costa Rica",
+      "code": "CR",
       "elo": 1608
     },
     {
       "rank": 63,
-      "team": "BA",
+      "team": "Bosnia and Herzegovina",
+      "code": "BA",
       "elo": 1605
     },
     {
       "rank": 63,
-      "team": "EI",
+      "team": "Ireland",
+      "code": "EI",
       "elo": 1605
     },
     {
       "rank": 65,
-      "team": "SA",
+      "team": "Saudi Arabia",
+      "code": "SA",
       "elo": 1596
     },
     {
       "rank": 66,
       "team": "NM",
+      "code": "NM",
       "elo": 1589
     },
     {
       "rank": 67,
-      "team": "ML",
+      "team": "Mali",
+      "code": "ML",
       "elo": 1588
     },
     {
       "rank": 68,
-      "team": "GH",
+      "team": "Ghana",
+      "code": "GH",
       "elo": 1571
     },
     {
       "rank": 69,
-      "team": "HN",
+      "team": "Honduras",
+      "code": "HN",
       "elo": 1570
     },
     {
       "rank": 70,
-      "team": "IS",
+      "team": "Iceland",
+      "code": "IS",
       "elo": 1568
     },
     {
       "rank": 71,
-      "team": "TN",
+      "team": "Tunisia",
+      "code": "TN",
       "elo": 1562
     },
     {
       "rank": 72,
-      "team": "IQ",
+      "team": "Iraq",
+      "code": "IQ",
       "elo": 1560
     },
     {
       "rank": 72,
-      "team": "ZA",
+      "team": "South Africa",
+      "code": "ZA",
       "elo": 1560
     },
     {
       "rank": 74,
-      "team": "AO",
+      "team": "Angola",
+      "code": "AO",
       "elo": 1542
     },
     {
       "rank": 75,
-      "team": "AE",
+      "team": "United Arab Emirates",
+      "code": "AE",
       "elo": 1540
     },
     {
       "rank": 76,
-      "team": "FI",
+      "team": "Finland",
+      "code": "FI",
       "elo": 1535
     },
     {
       "rank": 77,
-      "team": "NZ",
+      "team": "New Zealand",
+      "code": "NZ",
       "elo": 1534
     },
     {
       "rank": 78,
-      "team": "BF",
+      "team": "Burkina Faso",
+      "code": "BF",
       "elo": 1529
     },
     {
       "rank": 79,
-      "team": "JM",
+      "team": "Jamaica",
+      "code": "JM",
       "elo": 1527
     },
     {
       "rank": 80,
-      "team": "BY",
+      "team": "Belarus",
+      "code": "BY",
       "elo": 1522
     },
     {
       "rank": 81,
-      "team": "HT",
+      "team": "Haiti",
+      "code": "HT",
       "elo": 1517
     },
     {
       "rank": 82,
-      "team": "GT",
+      "team": "Guatemala",
+      "code": "GT",
       "elo": 1504
     },
     {
       "rank": 83,
-      "team": "OM",
+      "team": "Oman",
+      "code": "OM",
       "elo": 1479
     },
     {
       "rank": 83,
-      "team": "SY",
+      "team": "Syria",
+      "code": "SY",
       "elo": 1479
     },
     {
       "rank": 85,
-      "team": "PS",
+      "team": "Palestine",
+      "code": "PS",
       "elo": 1465
     },
     {
       "rank": 86,
-      "team": "GN",
+      "team": "Guinea",
+      "code": "GN",
       "elo": 1464
     },
     {
       "rank": 87,
-      "team": "ME",
+      "team": "Montenegro",
+      "code": "ME",
       "elo": 1461
     },
     {
       "rank": 88,
-      "team": "BG",
+      "team": "Bulgaria",
+      "code": "BG",
       "elo": 1458
     },
     {
       "rank": 89,
-      "team": "LU",
+      "team": "Luxembourg",
+      "code": "LU",
       "elo": 1450
     },
     {
       "rank": 90,
-      "team": "NS",
+      "team": "Northern Cyprus",
+      "code": "NS",
       "elo": 1442
     },
     {
       "rank": 91,
-      "team": "CW",
+      "team": "Curaçao",
+      "code": "CW",
       "elo": 1438
     },
     {
       "rank": 92,
-      "team": "SR",
+      "team": "Suriname",
+      "code": "SR",
       "elo": 1431
     },
     {
       "rank": 93,
-      "team": "KZ",
+      "team": "Kazakhstan",
+      "code": "KZ",
       "elo": 1428
     },
     {
       "rank": 94,
-      "team": "CN",
+      "team": "China",
+      "code": "CN",
       "elo": 1424
     },
     {
       "rank": 94,
       "team": "KD",
+      "code": "KD",
       "elo": 1424
     },
     {
       "rank": 96,
-      "team": "LY",
+      "team": "Libya",
+      "code": "LY",
       "elo": 1420
     },
     {
       "rank": 97,
-      "team": "GM",
+      "team": "Gambia",
+      "code": "GM",
       "elo": 1419
     },
     {
       "rank": 98,
-      "team": "BH",
+      "team": "Bahrain",
+      "code": "BH",
       "elo": 1414
     },
     {
       "rank": 99,
-      "team": "QA",
+      "team": "Qatar",
+      "code": "QA",
       "elo": 1411
     },
     {
       "rank": 100,
-      "team": "TH",
+      "team": "Thailand",
+      "code": "TH",
       "elo": 1409
     },
     {
       "rank": 101,
-      "team": "BJ",
+      "team": "Benin",
+      "code": "BJ",
       "elo": 1406
     },
     {
       "rank": 102,
-      "team": "GA",
+      "team": "Gabon",
+      "code": "GA",
       "elo": 1401
     },
     {
       "rank": 103,
-      "team": "UG",
+      "team": "Uganda",
+      "code": "UG",
       "elo": 1394
     },
     {
       "rank": 104,
-      "team": "VN",
+      "team": "Vietnam",
+      "code": "VN",
       "elo": 1391
     },
     {
       "rank": 105,
-      "team": "FO",
+      "team": "Faroe Islands",
+      "code": "FO",
       "elo": 1386
     },
     {
       "rank": 105,
-      "team": "TT",
+      "team": "Trinidad and Tobago",
+      "code": "TT",
       "elo": 1386
     },
     {
       "rank": 107,
-      "team": "NE",
+      "team": "Niger",
+      "code": "NE",
       "elo": 1382
     },
     {
       "rank": 108,
-      "team": "GQ",
+      "team": "Equatorial Guinea",
+      "code": "GQ",
       "elo": 1380
     },
     {
       "rank": 108,
-      "team": "MG",
+      "team": "Madagascar",
+      "code": "MG",
       "elo": 1380
     },
     {
       "rank": 110,
-      "team": "TG",
+      "team": "Togo",
+      "code": "TG",
       "elo": 1379
     },
     {
       "rank": 111,
-      "team": "KP",
+      "team": "North Korea",
+      "code": "KP",
       "elo": 1375
     },
     {
       "rank": 112,
-      "team": "KM",
+      "team": "Comoros",
+      "code": "KM",
       "elo": 1374
     },
     {
       "rank": 113,
-      "team": "AM",
+      "team": "Armenia",
+      "code": "AM",
       "elo": 1373
     },
     {
       "rank": 114,
-      "team": "ZW",
+      "team": "Zimbabwe",
+      "code": "ZW",
       "elo": 1372
     },
     {
       "rank": 115,
-      "team": "ZM",
+      "team": "Zambia",
+      "code": "ZM",
       "elo": 1371
     },
     {
       "rank": 116,
-      "team": "KE",
+      "team": "Kenya",
+      "code": "KE",
       "elo": 1363
     },
     {
       "rank": 117,
-      "team": "EE",
+      "team": "Estonia",
+      "code": "EE",
       "elo": 1360
     },
     {
       "rank": 118,
-      "team": "SD",
+      "team": "Sudan",
+      "code": "SD",
       "elo": 1350
     },
     {
       "rank": 119,
-      "team": "RE",
+      "team": "Réunion",
+      "code": "RE",
       "elo": 1345
     },
     {
       "rank": 120,
-      "team": "MZ",
+      "team": "El Salvador",
+      "code": "SV",
       "elo": 1342
     },
     {
       "rank": 120,
-      "team": "SL",
+      "team": "Mozambique",
+      "code": "MZ",
       "elo": 1342
     },
     {
       "rank": 120,
-      "team": "SV",
+      "team": "Sierra Leone",
+      "code": "SL",
       "elo": 1342
     },
     {
       "rank": 123,
-      "team": "GP",
+      "team": "Guadeloupe",
+      "code": "GP",
       "elo": 1338
     },
     {
       "rank": 124,
-      "team": "RW",
+      "team": "Rwanda",
+      "code": "RW",
       "elo": 1337
     },
     {
       "rank": 125,
-      "team": "NI",
+      "team": "Nicaragua",
+      "code": "NI",
       "elo": 1333
     },
     {
       "rank": 126,
-      "team": "KW",
+      "team": "Kuwait",
+      "code": "KW",
       "elo": 1332
     },
     {
       "rank": 127,
-      "team": "MR",
+      "team": "Mauritania",
+      "code": "MR",
       "elo": 1329
     },
     {
       "rank": 128,
-      "team": "ID",
+      "team": "Indonesia",
+      "code": "ID",
       "elo": 1323
     },
     {
       "rank": 129,
-      "team": "AZ",
+      "team": "Azerbaijan",
+      "code": "AZ",
       "elo": 1322
     },
     {
       "rank": 130,
       "team": "ZN",
+      "code": "ZN",
       "elo": 1320
     },
     {
       "rank": 131,
-      "team": "CY",
+      "team": "Cyprus",
+      "code": "CY",
       "elo": 1314
     },
     {
       "rank": 132,
-      "team": "TZ",
+      "team": "Tanzania",
+      "code": "TZ",
       "elo": 1313
     },
     {
       "rank": 133,
-      "team": "MQ",
+      "team": "Martinique",
+      "code": "MQ",
       "elo": 1312
     },
     {
       "rank": 134,
-      "team": "LR",
+      "team": "Liberia",
+      "code": "LR",
       "elo": 1304
     },
     {
       "rank": 135,
-      "team": "NA",
+      "team": "Namibia",
+      "code": "NA",
       "elo": 1303
     },
     {
       "rank": 136,
-      "team": "KG",
+      "team": "Kyrgyzstan",
+      "code": "KG",
       "elo": 1295
     },
     {
       "rank": 136,
-      "team": "MY",
+      "team": "Malaysia",
+      "code": "MY",
       "elo": 1295
     },
     {
       "rank": 138,
-      "team": "GY",
+      "team": "Guyana",
+      "code": "GY",
       "elo": 1293
     },
     {
       "rank": 139,
-      "team": "LB",
+      "team": "Latvia",
+      "code": "LV",
       "elo": 1288
     },
     {
       "rank": 139,
-      "team": "LV",
+      "team": "Lebanon",
+      "code": "LB",
       "elo": 1288
     },
     {
       "rank": 141,
-      "team": "ET",
+      "team": "Ethiopia",
+      "code": "ET",
       "elo": 1287
     },
     {
       "rank": 142,
-      "team": "BI",
+      "team": "Burundi",
+      "code": "BI",
       "elo": 1286
     },
     {
       "rank": 142,
-      "team": "NC",
+      "team": "New Caledonia",
+      "code": "NC",
       "elo": 1286
     },
     {
       "rank": 144,
-      "team": "TJ",
+      "team": "Tajikistan",
+      "code": "TJ",
       "elo": 1284
     },
     {
       "rank": 145,
-      "team": "DO",
+      "team": "Dominican Republic",
+      "code": "DO",
       "elo": 1283
     },
     {
       "rank": 146,
-      "team": "LT",
+      "team": "Lithuania",
+      "code": "LT",
       "elo": 1279
     },
     {
       "rank": 147,
-      "team": "MD",
+      "team": "Moldova",
+      "code": "MD",
       "elo": 1270
     },
     {
       "rank": 148,
-      "team": "BW",
+      "team": "Botswana",
+      "code": "BW",
       "elo": 1267
     },
     {
       "rank": 149,
-      "team": "MT",
+      "team": "Malta",
+      "code": "MT",
       "elo": 1255
     },
     {
       "rank": 150,
-      "team": "GW",
+      "team": "Guinea-Bissau",
+      "code": "GW",
       "elo": 1248
     },
     {
       "rank": 151,
-      "team": "CU",
+      "team": "Cuba",
+      "code": "CU",
       "elo": 1239
     },
     {
       "rank": 151,
-      "team": "MW",
+      "team": "Malawi",
+      "code": "MW",
       "elo": 1239
     },
     {
       "rank": 153,
-      "team": "CF",
+      "team": "Central African Republic",
+      "code": "CF",
       "elo": 1236
     },
     {
       "rank": 154,
-      "team": "GF",
+      "team": "French Guiana",
+      "code": "GF",
       "elo": 1223
     },
     {
       "rank": 155,
-      "team": "YT",
+      "team": "Mayotte",
+      "code": "YT",
       "elo": 1216
     },
     {
       "rank": 156,
-      "team": "TM",
+      "team": "Turkmenistan",
+      "code": "TM",
       "elo": 1209
     },
     {
       "rank": 157,
-      "team": "CG",
+      "team": "Congo",
+      "code": "CG",
       "elo": 1207
     },
     {
       "rank": 158,
-      "team": "ER",
+      "team": "Eritrea",
+      "code": "ER",
       "elo": 1202
     },
     {
       "rank": 159,
-      "team": "LS",
+      "team": "Lesotho",
+      "code": "LS",
       "elo": 1198
     },
     {
       "rank": 160,
-      "team": "YE",
+      "team": "Yemen",
+      "code": "YE",
       "elo": 1195
     },
     {
       "rank": 161,
       "team": "TI",
+      "code": "TI",
       "elo": 1177
     },
     {
       "rank": 162,
-      "team": "SG",
+      "team": "Singapore",
+      "code": "SG",
       "elo": 1166
     },
     {
       "rank": 163,
       "team": "SW",
+      "code": "SW",
       "elo": 1149
     },
     {
       "rank": 164,
-      "team": "VC",
+      "team": "Saint Vincent and the Grenadines",
+      "code": "VC",
       "elo": 1141
     },
     {
       "rank": 165,
-      "team": "PG",
+      "team": "Papua New Guinea",
+      "code": "PG",
       "elo": 1135
     },
     {
       "rank": 165,
-      "team": "PR",
+      "team": "Puerto Rico",
+      "code": "PR",
       "elo": 1135
     },
     {
       "rank": 167,
-      "team": "IN",
+      "team": "India",
+      "code": "IN",
       "elo": 1128
     },
     {
       "rank": 168,
-      "team": "BM",
+      "team": "Bermuda",
+      "code": "BM",
       "elo": 1117
     },
     {
       "rank": 168,
-      "team": "VU",
+      "team": "Vanuatu",
+      "code": "VU",
       "elo": 1117
     },
     {
       "rank": 170,
-      "team": "PH",
+      "team": "Philippines",
+      "code": "PH",
       "elo": 1112
     },
     {
       "rank": 171,
-      "team": "SS",
+      "team": "South Sudan",
+      "code": "SS",
       "elo": 1109
     },
     {
       "rank": 172,
-      "team": "FJ",
+      "team": "Fiji",
+      "code": "FJ",
       "elo": 1104
     },
     {
       "rank": 173,
-      "team": "HK",
+      "team": "Hong Kong",
+      "code": "HK",
       "elo": 1100
     },
     {
       "rank": 174,
-      "team": "GD",
+      "team": "Grenada",
+      "code": "GD",
       "elo": 1098
     },
     {
       "rank": 175,
-      "team": "AD",
+      "team": "Andorra",
+      "code": "AD",
       "elo": 1080
     },
     {
       "rank": 176,
-      "team": "BZ",
+      "team": "Belize",
+      "code": "BZ",
       "elo": 1073
     },
     {
       "rank": 176,
-      "team": "MU",
+      "team": "Chad",
+      "code": "TD",
       "elo": 1073
     },
     {
       "rank": 176,
-      "team": "TD",
+      "team": "Mauritius",
+      "code": "MU",
       "elo": 1073
     },
     {
       "rank": 179,
-      "team": "SB",
+      "team": "Solomon Islands",
+      "code": "SB",
       "elo": 1054
     },
     {
       "rank": 180,
-      "team": "MF",
+      "team": "Saint Martin (French part)",
+      "code": "MF",
       "elo": 1043
     },
     {
       "rank": 181,
-      "team": "MM",
+      "team": "Myanmar",
+      "code": "MM",
       "elo": 1035
     },
     {
       "rank": 181,
-      "team": "ST",
+      "team": "Sao Tome and Principe",
+      "code": "ST",
       "elo": 1035
     },
     {
       "rank": 183,
-      "team": "KN",
+      "team": "Saint Kitts and Nevis",
+      "code": "KN",
       "elo": 1030
     },
     {
       "rank": 184,
-      "team": "GI",
+      "team": "Gibraltar",
+      "code": "GI",
       "elo": 1011
     },
     {
       "rank": 185,
       "team": "JS",
+      "code": "JS",
       "elo": 1005
     },
     {
       "rank": 186,
-      "team": "LC",
+      "team": "Saint Lucia",
+      "code": "LC",
       "elo": 1003
     },
     {
       "rank": 187,
-      "team": "EH",
+      "team": "Western Sahara",
+      "code": "EH",
       "elo": 996
     },
     {
       "rank": 188,
-      "team": "AW",
+      "team": "Aruba",
+      "code": "AW",
       "elo": 979
     },
     {
       "rank": 188,
-      "team": "SO",
+      "team": "Somalia",
+      "code": "SO",
       "elo": 979
     },
     {
       "rank": 190,
-      "team": "SX",
+      "team": "Sint Maarten (Dutch part)",
+      "code": "SX",
       "elo": 974
     },
     {
       "rank": 191,
-      "team": "MS",
+      "team": "Montserrat",
+      "code": "MS",
       "elo": 972
     },
     {
       "rank": 192,
-      "team": "AF",
+      "team": "Afghanistan",
+      "code": "AF",
       "elo": 961
     },
     {
       "rank": 193,
-      "team": "GL",
+      "team": "Greenland",
+      "code": "GL",
       "elo": 945
     },
     {
       "rank": 194,
-      "team": "BD",
+      "team": "Bangladesh",
+      "code": "BD",
       "elo": 942
     },
     {
       "rank": 195,
-      "team": "DJ",
+      "team": "Djibouti",
+      "code": "DJ",
       "elo": 941
     },
     {
       "rank": 196,
-      "team": "DM",
+      "team": "Dominica",
+      "code": "DM",
       "elo": 935
     },
     {
       "rank": 197,
-      "team": "PK",
+      "team": "Pakistan",
+      "code": "PK",
       "elo": 911
     },
     {
       "rank": 198,
-      "team": "MC",
+      "team": "Monaco",
+      "code": "MC",
       "elo": 903
     },
     {
       "rank": 199,
-      "team": "BB",
+      "team": "Barbados",
+      "code": "BB",
       "elo": 898
     },
     {
       "rank": 200,
-      "team": "AG",
+      "team": "Antigua and Barbuda",
+      "code": "AG",
       "elo": 895
     },
     {
       "rank": 200,
-      "team": "LI",
+      "team": "Liechtenstein",
+      "code": "LI",
       "elo": 895
     },
     {
       "rank": 202,
-      "team": "NP",
+      "team": "Nepal",
+      "code": "NP",
       "elo": 893
     },
     {
       "rank": 203,
-      "team": "KH",
+      "team": "Cambodia",
+      "code": "KH",
       "elo": 871
     },
     {
       "rank": 204,
-      "team": "SC",
+      "team": "Seychelles",
+      "code": "SC",
       "elo": 853
     },
     {
       "rank": 205,
-      "team": "LK",
+      "team": "Sri Lanka",
+      "code": "LK",
       "elo": 836
     },
     {
       "rank": 206,
-      "team": "SM",
+      "team": "San Marino",
+      "code": "SM",
       "elo": 825
     },
     {
       "rank": 207,
-      "team": "TW",
+      "team": "Taiwan",
+      "code": "TW",
       "elo": 821
     },
     {
       "rank": 208,
-      "team": "BQ",
+      "team": "Bonaire, Sint Eustatius and Saba",
+      "code": "BQ",
       "elo": 816
     },
     {
       "rank": 209,
-      "team": "KY",
+      "team": "Cayman Islands",
+      "code": "KY",
       "elo": 800
     },
     {
       "rank": 209,
-      "team": "MV",
+      "team": "Maldives",
+      "code": "MV",
       "elo": 800
     },
     {
       "rank": 211,
       "team": "HG",
+      "code": "HG",
       "elo": 782
     },
     {
       "rank": 212,
-      "team": "TV",
+      "team": "Tuvalu",
+      "code": "TV",
       "elo": 756
     },
     {
       "rank": 213,
-      "team": "VG",
+      "team": "Virgin Islands, British",
+      "code": "VG",
       "elo": 743
     },
     {
       "rank": 214,
       "team": "EU",
+      "code": "EU",
       "elo": 737
     },
     {
       "rank": 215,
-      "team": "WS",
+      "team": "Samoa",
+      "code": "WS",
       "elo": 728
     },
     {
       "rank": 216,
-      "team": "MN",
+      "team": "Mongolia",
+      "code": "MN",
       "elo": 726
     },
     {
       "rank": 217,
-      "team": "BL",
+      "team": "Saint Barthélemy",
+      "code": "BL",
       "elo": 725
     },
     {
       "rank": 218,
-      "team": "LA",
+      "team": "Laos",
+      "code": "LA",
       "elo": 712
     },
     {
       "rank": 218,
-      "team": "TL",
+      "team": "Timor-Leste",
+      "code": "TL",
       "elo": 712
     },
     {
       "rank": 220,
-      "team": "GU",
+      "team": "Guam",
+      "code": "GU",
       "elo": 705
     },
     {
       "rank": 221,
-      "team": "WF",
+      "team": "Wallis and Futuna",
+      "code": "WF",
       "elo": 699
     },
     {
       "rank": 222,
-      "team": "VA",
+      "team": "Holy See (Vatican City State)",
+      "code": "VA",
       "elo": 692
     },
     {
       "rank": 223,
       "team": "AB",
+      "code": "AB",
       "elo": 691
     },
     {
       "rank": 224,
-      "team": "BS",
+      "team": "Bahamas",
+      "code": "BS",
       "elo": 685
     },
     {
       "rank": 225,
-      "team": "PM",
+      "team": "Saint Pierre and Miquelon",
+      "code": "PM",
       "elo": 677
     },
     {
       "rank": 226,
-      "team": "TC",
+      "team": "Turks and Caicos Islands",
+      "code": "TC",
       "elo": 657
     },
     {
       "rank": 227,
-      "team": "AI",
+      "team": "Anguilla",
+      "code": "AI",
       "elo": 646
     },
     {
       "rank": 228,
       "team": "TE",
+      "code": "TE",
       "elo": 628
     },
     {
       "rank": 229,
-      "team": "VI",
+      "team": "Virgin Islands, U.S.",
+      "code": "VI",
       "elo": 627
     },
     {
       "rank": 230,
-      "team": "BT",
+      "team": "Bhutan",
+      "code": "BT",
       "elo": 622
     },
     {
       "rank": 230,
-      "team": "CK",
+      "team": "Cook Islands",
+      "code": "CK",
       "elo": 622
     },
     {
       "rank": 232,
-      "team": "MO",
+      "team": "Macao",
+      "code": "MO",
       "elo": 589
     },
     {
       "rank": 233,
-      "team": "CX",
+      "team": "Christmas Island",
+      "code": "CX",
       "elo": 578
     },
     {
       "rank": 234,
-      "team": "BN",
+      "team": "Brunei Darussalam",
+      "code": "BN",
       "elo": 571
     },
     {
       "rank": 234,
-      "team": "FK",
+      "team": "Falkland Islands (Malvinas)",
+      "code": "FK",
       "elo": 571
     },
     {
       "rank": 236,
-      "team": "FM",
+      "team": "Micronesia, Federated States of",
+      "code": "FM",
       "elo": 564
     },
     {
       "rank": 237,
-      "team": "MH",
+      "team": "Marshall Islands",
+      "code": "MH",
       "elo": 559
     },
     {
       "rank": 238,
-      "team": "KI",
+      "team": "Kiribati",
+      "code": "KI",
       "elo": 544
     },
     {
       "rank": 239,
-      "team": "TO",
+      "team": "Tonga",
+      "code": "TO",
       "elo": 520
     },
     {
       "rank": 240,
-      "team": "NU",
+      "team": "Niue",
+      "code": "NU",
       "elo": 496
     },
     {
       "rank": 241,
-      "team": "MP",
+      "team": "Northern Mariana Islands",
+      "code": "MP",
       "elo": 432
     },
     {
       "rank": 242,
-      "team": "CC",
+      "team": "Cocos (Keeling) Islands",
+      "code": "CC",
       "elo": 422
     },
     {
       "rank": 243,
-      "team": "PW",
+      "team": "Palau",
+      "code": "PW",
       "elo": 402
     },
     {
       "rank": 244,
-      "team": "AS",
+      "team": "American Samoa",
+      "code": "AS",
       "elo": 370
     }
   ]
