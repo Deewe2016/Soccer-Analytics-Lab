@@ -21,61 +21,77 @@ jobs:
       - name: Install country-name lookup
         run: python -m pip install pycountry
 
-      - name: Convert TSV to JSON
+      - name: Convert Elo data to full team names
         run: |
           python - <<'PY'
-          import csv, json
+          import csv, json, re
           from datetime import datetime, timezone
           import pycountry
 
-          # World Football Elo uses a few custom two-letter codes for
-          # football associations that are not ISO country codes.
-          custom_names = {
-              "EN": "England",
-              "WA": "Wales",
-              "SQ": "Scotland",
-              "EI": "Ireland",
-              "KO": "Kosovo",
-              "CD": "Democratic Republic of the Congo",
-              "PS": "Palestine",
-              "BA": "Bosnia and Herzegovina",
-              "RE": "Réunion",
-              "NS": "Northern Cyprus",
+          custom_names={
+              'EN':'England','WA':'Wales','SQ':'Scotland','NI':'Northern Ireland',
+              'EI':'Ireland','KO':'Kosovo','KD':'Kosovo','CD':'Democratic Republic of the Congo',
+              'CI':"Côte d'Ivoire",'NM':'North Macedonia','PS':'Palestine','BA':'Bosnia and Herzegovina',
+              'RE':'Réunion','NS':'Northern Cyprus','CW':'Curaçao'
           }
 
           def full_name(code):
-              code = code.strip().upper()
+              code=code.strip().upper()
               if code in custom_names:
                   return custom_names[code]
-              country = pycountry.countries.get(alpha_2=code)
+              country=pycountry.countries.get(alpha_2=code)
               if country:
-                  return getattr(country, "common_name", None) or country.name
+                  return getattr(country,'common_name',None) or country.name
               return code
 
-          rows = []
-          with open("World.tsv", newline="", encoding="utf-8") as f:
-              reader = csv.reader(f, delimiter="\t")
-              for row in reader:
-                  if len(row) < 4:
-                      continue
+          def parse_row(row):
+              tokens=[x.strip() for x in row if x.strip()]
+              code=None
+              elo=None
+              for token in tokens:
+                  t=token.upper()
+                  if len(t)==2 and (t in custom_names or pycountry.countries.get(alpha_2=t)):
+                      code=t
+                      break
+              for token in tokens:
+                  cleaned=token.replace(',','')
                   try:
-                      rank = int(row[0])
-                      code = row[2].strip()
-                      elo = int(float(row[3]))
-                  except (ValueError, TypeError):
-                      continue
-                  if code:
-                      rows.append({"rank": rank, "team": full_name(code), "code": code, "elo": elo})
+                      value=float(cleaned)
+                      if 1000 <= value <= 2500:
+                          elo=round(value)
+                          break
+                  except ValueError:
+                      pass
+              return code,elo
 
-          rows.sort(key=lambda x: (x["rank"], x["team"]))
-          payload = {
-              "source": "World Football Elo Ratings (eloratings.net)",
-              "updatedAt": datetime.now(timezone.utc).isoformat(),
-              "teams": rows
+          rows=[]
+          with open('World.tsv',newline='',encoding='utf-8') as f:
+              for raw in f:
+                  if not raw.strip():
+                      continue
+                  row=raw.rstrip('\n\r').split('\t')
+                  code,elo=parse_row(row)
+                  if code and elo is not None:
+                      rows.append({'team':full_name(code),'code':code,'elo':elo})
+
+          # Remove duplicate codes and sort highest Elo first.
+          unique={item['code']:item for item in rows}
+          rows=sorted(unique.values(),key=lambda x:(-x['elo'],x['team']))
+          for rank,item in enumerate(rows,1):
+              item['rank']=rank
+
+          if len(rows)<50:
+              raise RuntimeError(f'Elo download produced only {len(rows)} teams; refusing to overwrite ratings.json.')
+
+          payload={
+              'source':'World Football Elo Ratings (eloratings.net)',
+              'updatedAt':datetime.now(timezone.utc).isoformat(),
+              'teams':rows
           }
-          with open("ratings.json", "w", encoding="utf-8") as f:
-              json.dump(payload, f, indent=2, ensure_ascii=False)
-          print(f"Saved {len(rows)} teams")
+          with open('ratings.json','w',encoding='utf-8') as f:
+              json.dump(payload,f,indent=2,ensure_ascii=False)
+              f.write('\n')
+          print(f'Saved {len(rows)} teams with full names.')
           PY
           rm World.tsv
 
