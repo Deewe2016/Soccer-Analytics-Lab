@@ -4,7 +4,8 @@ function predictMatch(team1Stats,team2Stats,venue="neutral"){
  const team1=buildTeamProfile(team1Stats),team2=buildTeamProfile(team2Stats);
  let venueAdjustment=venue==="home"?0.18:venue==="away"?-0.18:0;
  const eloGap=(team1.elo-team2.elo)/400;
- const strength=Math.tanh(eloGap*1.35);
+ // Softer around close matchups, but still very strong for extreme Elo gaps.
+ const strength=tanh(eloGap*0.95);
  const attack1=0.45*team1.xgFor+0.20*(team1.shots/10)+0.15*(team1.shotsOnTarget/4)+0.10*team1.attack+0.10*(team1.possession/50);
  const attack2=0.45*team2.xgFor+0.20*(team2.shots/10)+0.15*(team2.shotsOnTarget/4)+0.10*team2.attack+0.10*(team2.possession/50);
  const defense1=0.70*team1.xgAgainst+0.30*team1.defense;
@@ -12,11 +13,11 @@ function predictMatch(team1Stats,team2Stats,venue="neutral"){
  const base1=1.15+(attack1-defense2)*0.50+team1.form*0.04+venueAdjustment;
  const base2=1.15+(attack2-defense1)*0.50+team2.form*0.04-venueAdjustment;
  const rawTotal=Math.max(1.8,base1+base2);
- // Large strength gaps should also increase the expected total, because dominant teams create more scoring opportunities.
- const gapBoost=Math.min(1.35,Math.abs(strength)*1.25);
+ // Scoring-volume boost grows slowly for close games and much more for extreme mismatches.
+ const gapBoost=Math.min(1.35,Math.pow(Math.abs(strength),1.55)*1.35);
  const totalGoals=Math.min(5.6,rawTotal+gapBoost);
- // Nonlinear split: extreme Elo gaps become strongly asymmetric, while close teams remain balanced.
- const share1=0.5+0.49*strength;
+ // Keep close Elo matchups competitive; only extreme gaps become strongly asymmetric.
+ const share1=0.5+0.43*strength;
  const expectedGoals1=Math.max(0.06,totalGoals*share1);
  const expectedGoals2=Math.max(0.06,totalGoals*(1-share1));
  return{expectedGoals:{team1:expectedGoals1,team2:expectedGoals2},eloDifference:team1.elo-team2.elo}
