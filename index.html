@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Soccer Analytics Lab</title><link rel="stylesheet" href="style.css"></head>
 <body>
 <header><div><span class="eyebrow">SOCCER ANALYTICS LAB</span><h1 id="title">Match Lab</h1><p id="subtitle">Explore team strength, expected results, and goal projections.</p></div><div><button id="languageToggle" type="button">中文</button><div class="ball">⚽</div></div></header>
-<nav class="tabs"><button id="matchTab" class="tab active" type="button">Match Lab</button><button id="tournamentTab" class="tab" type="button">World Cup Simulator</button></nav>
+<nav class="tabs"><button id="matchTab" class="tab active" type="button">Match Lab</button><button id="tournamentTab" class="tab" type="button">World Cup Simulator</button><button id="statsTab" class="tab" type="button">Simulation Stats</button></nav>
 <main>
 <div id="matchPage">
 <section class="card"><h2 id="comparisonTitle">Team comparison</h2><p id="dataStatus" class="muted">Loading automatic ratings…</p>
@@ -19,5 +19,9 @@
 <section class="card"><h2 id="wcTitle">World Cup Simulator — Phase 2.1</h2><p id="wcIntro">One complete simulation using the 48 teams from the 2026 World Cup. Teams are automatically drawn into 12 groups of four, then the group stage and knockout rounds are simulated.</p><div class="tournament-controls"><button id="runTournament">Run 1 Simulation</button><span id="tournamentStatus" class="muted">Ready.</span></div></section>
 <section id="tournamentResults" hidden></section>
 </div>
-</main><footer id="footer">Soccer Analytics Lab · v2.1</footer>
+<div id="statsPage" hidden>
+<section class="card"><h2>Monte Carlo Simulation</h2><p>Run many World Cup simulations and see how often each team reaches each stage.</p><div class="stats-controls"><label><span>Number of simulations</span><input id="simulationCount" type="number" min="10" max="10000" step="10" value="1000"></label><button id="runManySimulations">Run Simulations</button><span id="statsStatus" class="muted">Ready.</span></div></section>
+<section id="simulationStats" hidden></section>
+</div>
+</main><footer id="footer">Soccer Analytics Lab · v2.2</footer>
 <script src="model.js"></script><script src="script.js"></script><script src="tournament.js"></script></body></html>
