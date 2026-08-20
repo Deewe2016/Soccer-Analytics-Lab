@@ -16,12 +16,12 @@
 <section class="card"><h2 id="howTitle">How the model works</h2><p id="howText">The model combines Elo with attacking and defensive indicators, chance creation, shots, possession, and recent form. It converts the resulting expected goals into scoreline and win/draw/loss probabilities.</p><div class="bar"><span id="barHome"></span><span id="barDraw"></span><span id="barAway"></span></div><p class="muted" id="disclaimer">This is an educational model. Its weights should be backtested against historical matches before treating it as a calibrated forecasting system.</p></section>
 </div>
 <div id="tournamentPage" hidden>
-<section class="card"><h2 id="wcTitle">World Cup Simulator — Phase 2.1</h2><p id="wcIntro">One complete simulation using the 48 teams from the 2026 World Cup. Teams are automatically drawn into 12 groups of four, then the group stage and knockout rounds are simulated.</p><div class="tournament-controls"><button id="runTournament">Run 1 Simulation</button><span id="tournamentStatus" class="muted">Ready.</span></div></section>
+<section class="card"><h2 id="wcTitle">World Cup Simulator</h2><p id="wcIntro">Choose a World Cup edition. The simulator keeps the same 48-team engine while allowing future tournaments to use their own team configuration.</p><div class="tournament-controls"><label><span id="wcYearLabel">World Cup</span><select id="wcYear"><option value="2026" selected>2026</option><option value="2030">2030 — projected</option></select></label><button id="runTournament">Run 1 Simulation</button><span id="tournamentStatus" class="muted">Ready.</span></div><p id="wc2030Note" class="muted" hidden>2030 mode: Spain, Portugal, Morocco, Argentina, Paraguay and Uruguay are treated as confirmed hosts/centenary participants. The other slots are projections using the current 2026 team pool until real 2030 qualifiers are known.</p></section>
 <section id="tournamentResults" hidden></section>
 </div>
 <div id="statsPage" hidden>
 <section class="card"><h2>Monte Carlo Simulation</h2><p>Run many World Cup simulations and see how often each team reaches each stage.</p><div class="stats-controls"><label><span>Number of simulations</span><input id="simulationCount" type="number" min="10" max="10000" step="10" value="1000"></label><button id="runManySimulations">Run Simulations</button><span id="statsStatus" class="muted">Ready.</span></div></section>
 <section id="simulationStats" hidden></section>
 </div>
-</main><footer id="footer">Soccer Analytics Lab · v2.2</footer>
+</main><footer id="footer">Soccer Analytics Lab · v2.3</footer>
 <script src="model.js"></script><script src="script.js"></script><script src="tournament.js"></script></body></html>
