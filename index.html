@@ -20,8 +20,8 @@
 <section id="tournamentResults" hidden></section>
 </div>
 <div id="statsPage" hidden>
-<section class="card"><h2>Monte Carlo Simulation</h2><p>Run many World Cup simulations and see how often each team reaches each stage.</p><div class="stats-controls"><label><span>Number of simulations</span><input id="simulationCount" type="number" min="10" max="10000" step="10" value="1000"></label><button id="runManySimulations">Run Simulations</button><span id="statsStatus" class="muted">Ready.</span></div></section>
+<section class="card"><h2>Monte Carlo Simulation</h2><p>Run many World Cup simulations and see how often each team reaches each stage.</p><div class="stats-controls"><label><span>World Cup</span><select id="statsWorldCupYear"><option value="2026" selected>2026</option><option value="2030">2030 — projected</option></select></label><label><span>Number of simulations</span><input id="simulationCount" type="number" min="10" max="10000" step="10" value="1000"></label><button id="runManySimulations">Run Simulations</button><span id="statsStatus" class="muted">Ready.</span></div><p id="stats2030Note" class="muted" hidden>2030 stats use the projected 2030 field. Spain, Portugal, Morocco, Argentina, Paraguay and Uruguay are the confirmed automatic qualifiers; the remaining teams are provisional until qualification is settled.</p></section>
 <section id="simulationStats" hidden></section>
 </div>
-</main><footer id="footer">Soccer Analytics Lab · v2.3</footer>
+</main><footer id="footer">Soccer Analytics Lab · v2.4</footer>
 <script src="model.js"></script><script src="script.js"></script><script src="tournament_v2.js"></script></body></html>
