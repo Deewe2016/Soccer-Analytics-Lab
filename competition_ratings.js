@@ -1,0 +1,4 @@
+// Share the site's live Elo ratings with the multi-competition simulator.
+window.__competitionElo=window.__competitionElo||{};
+async function loadCompetitionRatings(){try{const r=await fetch('ratings.json?competition='+Date.now(),{cache:'no-store'});if(!r.ok)return;const d=await r.json();if(Array.isArray(d.teams))d.teams.forEach(x=>{const n=String(x.team||'').trim();const aliases={'USA':'United States','Korea Republic':'South Korea','IR Iran':'Iran','DR Congo':'DR Congo',"Côte d'Ivoire":'Côte d’Ivoire'};const name=aliases[n]||n;if(name)window.__competitionElo[name]=Number(x.elo)||1500})}catch(e){console.warn('Competition Elo ratings unavailable; using 1500 fallback.')}}
+loadCompetitionRatings();
