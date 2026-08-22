@@ -1,6 +1,6 @@
 {
   "source": "World Football Elo Ratings (eloratings.net)",
-  "updatedAt": "2026-08-21T04:05:09.451982+00:00",
+  "updatedAt": "2026-08-22T04:00:11.556870+00:00",
   "teams": [
     {
       "team": "Spain",
@@ -189,14 +189,14 @@
       "rank": 31
     },
     {
-      "team": "United States",
-      "code": "US",
-      "elo": 1747,
+      "team": "Scotland",
+      "code": "SQ",
+      "elo": 1746,
       "rank": 32
     },
     {
-      "team": "Scotland",
-      "code": "SQ",
+      "team": "United States",
+      "code": "US",
       "elo": 1746,
       "rank": 33
     },
@@ -461,7 +461,7 @@
     {
       "team": "Finland",
       "code": "FI",
-      "elo": 1535,
+      "elo": 1536,
       "rank": 77
     },
     {
@@ -497,7 +497,7 @@
     {
       "team": "Guatemala",
       "code": "GT",
-      "elo": 1505,
+      "elo": 1504,
       "rank": 83
     },
     {
@@ -879,14 +879,14 @@
       "rank": 146
     },
     {
-      "team": "Burundi",
-      "code": "BI",
-      "elo": 1286,
+      "team": "New Caledonia",
+      "code": "NC",
+      "elo": 1287,
       "rank": 147
     },
     {
-      "team": "New Caledonia",
-      "code": "NC",
+      "team": "Burundi",
+      "code": "BI",
       "elo": 1286,
       "rank": 148
     },
